@@ -1,4 +1,4 @@
-const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis']);
+const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis','plato-republic-1-analysis','plato-republic-2-analysis','plato-republic-3-analysis','plato-republic-4-analysis']);
 const readingCache = new Map();
 let readerRenderNumber = 0;
 const readerCopy = {
