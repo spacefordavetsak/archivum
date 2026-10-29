@@ -1,0 +1,9 @@
+.philosopher-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.philosopher-grid .philosopher-card{min-height:433px;padding:32px}
+.philosopher-card h2{font-size:clamp(36px,3.3vw,52px);line-height:1.08;letter-spacing:-1.3px;max-width:calc(100% - 34px);overflow-wrap:break-word}
+.philosopher-card:hover,.philosopher-card:focus-visible{border-color:var(--ink);background:#f4f4ef}
+.philosopher-page h1{max-width:1200px}
+@media(min-width:1001px){.philosophy-page{padding-top:36px}.philosophy-page .back-link{margin-bottom:32px}.philosophy-page h1{font-size:clamp(64px,7vw,100px)}.philosophy-page .section-description{margin-bottom:40px}.philosophy-page .section-rule{margin-bottom:28px}}
+@media(max-width:1100px){.philosopher-grid .philosopher-card{min-height:372px}}
+@media(max-width:1000px){.philosopher-grid{gap:12px}.philosopher-grid .philosopher-card{padding:24px}.philosopher-card h2{font-size:38px;letter-spacing:-1px}}
+@media(max-width:600px){.philosopher-grid{grid-template-columns:minmax(0,1fr)}.philosopher-grid .philosopher-card{min-height:310px;padding:22px}.philosopher-grid .philosopher-card h2{font-size:34px;letter-spacing:-.8px;max-width:100%}.philosopher-grid .card-meta{font-size:9px!important;letter-spacing:1.4px!important}.philosopher-page h1{font-size:clamp(43px,11vw,62px)}}

@@ -1,0 +1,45 @@
+.note-body .archive-visual{margin:30px 0 38px;max-width:100%;min-width:0;border:1px solid var(--line);background:var(--paper)}
+.note-body .visual-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0;padding:8px 14px;border-bottom:1px solid var(--line);font:10px/1.5 var(--mono);letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+.visual-expand{display:flex;gap:8px;align-items:center;justify-content:center;min-height:44px;padding:8px 5px;font:10px var(--mono);letter-spacing:.7px;text-transform:uppercase;flex-shrink:0}.visual-expand:hover{color:var(--ink)}
+.visual-scroll{max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#99998e #eeeeE7}
+.visual-canvas{width:max-content;min-width:100%;padding:26px 20px}
+.note-body .visual-hint{margin:0;padding:12px 15px;border-top:1px solid var(--line);font:10px/1.6 var(--mono);letter-spacing:.2px;color:var(--muted)}
+.note-body .visual-canvas>.note-tree{border:0;background:none;padding:0;margin:0;width:max-content;min-width:100%;overflow:visible;text-align:center;font-size:16px;line-height:1.35}
+.note-body .note-tree ul{position:relative;display:flex;justify-content:center;align-items:flex-start;width:max-content;min-width:100%;margin:0!important;padding:24px 0 0!important;list-style:none!important}
+.note-body .note-tree>ul{padding-top:0!important}
+.note-body .note-tree li{position:relative;float:none;flex:0 0 auto;text-align:center;margin:0!important;padding:24px 7px 0!important;list-style:none!important;border:0!important}
+.note-body .note-tree li::before,.note-body .note-tree li::after{content:'';position:absolute;top:0;right:50%;width:50%;height:24px;border-top:1px solid #858578;pointer-events:none}
+.note-body .note-tree li::after{right:auto;left:50%;border-left:1px solid #858578}
+.note-body .note-tree li:only-child::after,.note-body .note-tree li:only-child::before{display:none}
+.note-body .note-tree li:only-child{padding-top:0!important}
+.note-body .note-tree li:first-child::before,.note-body .note-tree li:last-child::after{border:0}
+.note-body .note-tree li:last-child::before{border-right:1px solid #858578;border-radius:0 4px 0 0}
+.note-body .note-tree li:first-child::after{border-radius:4px 0 0 0}
+.note-body .note-tree ul ul::before{content:'';position:absolute;top:0;left:50%;height:24px;border-left:1px solid #858578;pointer-events:none}
+.note-body .note-tree li>span{display:inline-block;width:152px;min-height:58px;padding:12px 10px;border:1px solid #818176;border-radius:3px;background:#fff;color:#34342c;font:500 16px/1.35 var(--reading);white-space:normal;overflow-wrap:break-word;text-align:center}
+.note-body .note-tree>ul>li>span{width:186px;background:#30302a;border-color:#30302a;color:#fff;font:500 16px/1.4 var(--reading)}
+.note-body .note-tree>ul>li>ul>li>span{background:#f0f0ea;border-color:#9c9c90}
+.note-body .note-tree>ul>li>ul>li>ul>li>span{background:#fff;border-color:#68685d}
+.note-body .visual-canvas>.note-diagram{width:max-content;max-width:none;margin:0;overflow:visible}
+.note-body .visual-canvas svg{display:block;width:auto;height:auto;max-width:none;min-width:0}
+.archive-visual[data-visual-kind="map"] .visual-canvas{width:100%;min-width:0;padding:0}
+.note-body .archive-visual[data-visual-kind="map"] img{display:block;width:100%;max-width:100%;height:auto;margin:0}
+.visual-viewer{width:calc(100vw - 24px);max-width:1700px;height:calc(100dvh - 24px);max-height:none;padding:0;border:1px solid #77776c;overflow:hidden}
+.visual-viewer[open]{display:flex;flex-direction:column}
+.visual-viewer-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px;border-bottom:1px solid var(--line);flex-shrink:0}
+.visual-viewer-header h2{font:400 28px/1.15 var(--serif);margin:0;letter-spacing:-.3px;overflow-wrap:break-word}
+.visual-viewer-close{font:32px var(--serif);width:44px;height:44px;flex-shrink:0}
+.visual-viewer-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-bottom:1px solid var(--line);flex-shrink:0}
+.visual-viewer-controls button{min-width:44px;min-height:44px;border:1px solid var(--line);font:12px var(--mono);padding:8px 12px}
+.visual-viewer-controls button:hover{background:#ebebe3}.visual-viewer-controls output{min-width:48px;text-align:center;font:11px var(--mono);color:var(--muted)}
+.visual-viewer-scroll{position:relative;flex:1;min-height:0;overflow:auto;padding:18px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#efefe9}
+.visual-viewer-stage{position:relative;margin:auto;min-width:1px;min-height:1px}
+.visual-viewer-content{position:absolute;top:0;left:0;transform-origin:0 0;width:max-content;max-width:none;background:var(--paper);padding:24px}
+.visual-viewer-content>div:first-child{border:0!important;margin:0!important;padding:0!important}
+.visual-viewer-content .note-tree{width:max-content;max-width:none;overflow:visible;border:0;margin:0;padding:0}
+.visual-viewer-content .note-diagram{width:max-content;max-width:none;overflow:visible;margin:0}
+.visual-viewer-content img{display:block;width:auto;max-width:none;height:auto;max-height:none;margin:0;user-select:none}
+.visual-viewer-content svg{width:auto;max-width:none;min-width:0;height:auto}
+.visual-viewer-footer{font:10px/1.5 var(--mono);padding:10px 16px;color:var(--muted);border-top:1px solid var(--line);text-align:center;flex-shrink:0}
+@media(max-width:600px){.note-body .archive-visual{margin-block:25px 30px}.note-body .visual-bar{padding:5px 12px;font-size:9px;gap:8px}.visual-expand{font-size:9px;letter-spacing:.3px}.visual-canvas{padding:24px 16px}.note-body .visual-hint{font-size:9px;padding:10px 12px}.visual-viewer{width:calc(100vw - 12px);height:calc(100dvh - 12px)}.visual-viewer-header{padding:8px 10px;gap:10px}.visual-viewer-header h2{font-size:24px}.visual-viewer-controls{gap:4px;padding:6px 8px}.visual-viewer-controls button{padding-inline:10px;font-size:11px}.visual-viewer-controls output{min-width:40px;font-size:10px}.visual-viewer-scroll{padding:10px}.visual-viewer-footer{font-size:9px;padding:8px 12px}}
+.note-body .visual-expand svg{width:17px;height:17px;min-width:17px;max-width:17px;flex-shrink:0}

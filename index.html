@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050504">
+  <meta name="description" content="ARCHIVUM — личный архив знаний. Философия, история, литература, архитектура и искусство в одном собрании.">
+  <title>ARCHIVUM — личный архив знаний</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reader.css">
+  <link rel="stylesheet" href="plato-analysis.css">
+  <link rel="stylesheet" href="visuals.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="philosophy.css">
+  <link rel="stylesheet" href="landing.css?v=prologue-reveal-1">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="library.css?v=collection-covers-1">
+  <link rel="stylesheet" href="science.css">
+  <script src="visuals.js" defer></script>
+  <script src="blocks.js?v=collection-covers-1" defer></script>
+  <script src="history.js?v=greece-cover-1" defer></script>
+  <script src="poetry.js" defer></script>
+  <script src="philosophy.js?v=plato-cover-1" defer></script>
+  <script src="library.js?v=history-mosaic-1" defer></script>
+  <script src="reader.js?v=history-mosaic-1" defer></script>
+  <script src="wordmark.js" defer></script>
+  <script src="landing.js?v=prologue-reveal-1" defer></script>
+  <script src="science.js?v=speed-140" defer></script>
+  <script src="app.js?v=science-1" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="header-inner shell" aria-label="Основная навигация">
+      <a class="brand" href="#/" aria-label="ARCHIVUM — главная"><span class="brand-mark" aria-hidden="true">◆</span> ARCHIVUM</a>
+      <div class="header-actions">
+        <button class="text-button search-trigger" id="open-search"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span data-i18n="search">Поиск</span></button>
+        <button id="language-toggle" class="language-button" aria-label="Switch to English">EN</button>
+        <button id="open-login" class="text-button" data-i18n="login">Вход</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="shell" tabindex="-1"></main>
+
+  <footer class="site-footer shell"><a href="#/">◆ ARCHIVUM</a><span data-i18n="footer">Личный архив знаний</span><span>MMXXVI</span></footer>
+
+  <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-top"><span id="search-title" class="eyebrow" data-i18n="searchArchive">Поиск по архиву</span><button class="icon-button" data-close aria-label="Закрыть">×</button></div>
+    <div class="search-field"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="search-input" type="search" autocomplete="off" placeholder="Раздел, автор или название…" aria-label="Поисковый запрос"></div>
+    <div id="search-results" aria-live="polite"></div>
+    <div class="dialog-bottom"><span data-i18n="searchHint">Поиск по разделам и названиям материалов</span><kbd>ESC</kbd></div>
+  </dialog>
+
+  <dialog id="login-dialog" class="login-dialog" aria-labelledby="login-title">
+    <div class="dialog-top"><span class="eyebrow">◆ ARCHIVUM</span><button class="icon-button" data-close aria-label="Закрыть">×</button></div>
+    <h2 id="login-title" data-i18n="loginTitle">Вход в архив</h2>
+    <p data-i18n="loginText">Управление существующими материалами доступно в исходном архиве. Вход откроется в новой вкладке.</p>
+    <a class="solid-button" href="https://reference-library.preview.emergentagent.com/admin/login" target="_blank" rel="noopener noreferrer"><span data-i18n="loginAction">Перейти к входу</span><span aria-hidden="true">↗</span></a>
+  </dialog>
+</body>
+</html>

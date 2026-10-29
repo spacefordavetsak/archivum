@@ -1,0 +1,32 @@
+:root{color-scheme:dark;--paper:#050504;--ink:#f3eddf;--muted:#b5ab98;--line:#5b4d36;--panel:#15130f;--gold:#dec18b}
+::selection{background:#b89350;color:#080705}
+.site-header{background:rgba(5,5,4,.97);border-bottom-color:var(--line)}
+.brand-mark,.ornament span{background:var(--gold)}
+.language-button{border-color:#ac9469}.language-button::after{border-color:#ac9469}
+.hero .eyebrow,.intro,.back-link,.source-label{color:var(--muted)}
+.ornament::before,.ornament::after{background:var(--line)}
+.section-card{border-color:#88734e}.section-card .card-meta{color:#c5b798}
+.section-card.has-image .card-meta{color:#eee4d1}.section-card.has-image{border-color:#5b4d36}
+.philosopher-card:hover,.philosopher-card:focus-visible{background:var(--panel);border-color:var(--gold)}
+.empty-section .diamond{color:var(--gold)}
+.search-field{border-bottom-color:#8c7753}.search-field input::placeholder{color:var(--muted)}
+.search-result{border-bottom-color:var(--line)}.search-result:hover{color:var(--gold)}
+dialog{border-color:#88734e;box-shadow:0 24px 90px #0009}dialog::backdrop{background:#000a}
+.solid-button{background:var(--gold);color:#080705}.solid-button:hover{background:#efdbb4}
+.reader-contents a{color:var(--muted)}.reader-contents nav{scrollbar-color:#88734e transparent}
+.note-body{--accent:#dec18b;--fg:#f3eddf;--text:#f3eddf;--bg:#050504;--panel:#15130f;--border:#5b4d36;--dim:#b5ab98}
+.note-body blockquote,.note-body .note-quote{color:#d0c4ac;border-left-color:#b39259}
+.note-body .note-key,.note-body .note-key-thought,.note-body .note-takeaway,.note-body pre{background:var(--panel)}
+.note-body th{background:#1c1811}.note-body .note-entry{border-bottom-color:var(--line)}
+.note-body .note-tree li::before,.note-body .note-tree li::after,.note-body .note-tree ul ul::before{border-color:#a48b5e}
+.note-body .note-tree li:first-child::before,.note-body .note-tree li:last-child::after{border:0}
+.note-body .note-tree li>span{background:#15130f;border-color:#a48b5e;color:var(--ink)}
+.note-body .note-tree>ul>li>span{background:#c7a25e;border-color:#c7a25e;color:#090807}
+.note-body .note-tree>ul>li>ul>li>span{background:#282116;border-color:#a48b5e;color:var(--ink)}
+.note-body .note-tree>ul>li>ul>li>ul>li>span{background:#15130f;border-color:#a48b5e;color:var(--ink)}
+.visual-scroll{scrollbar-color:#a48b5e #15130f}.visual-viewer-scroll{background:#0e0c09}
+.visual-viewer-controls button:hover{background:#282116}
+.reader-toc-dialog li a{border-bottom-color:var(--line)}
+@media(max-width:900px){.reader-mobile-tools{background:rgba(5,5,4,.98);border-top-color:var(--line)}}
+@media(min-width:1001px){.archive-grid .card-religion{grid-column:5/9;grid-row:5}.archive-grid .card-alania{grid-column:9/13;grid-row:5}.archive-grid .card-science{grid-column:1/5;grid-row:6}}
+@media(min-width:601px) and (max-width:1000px){.archive-grid .card-religion{grid-column:1;grid-row:9}.archive-grid .card-alania{grid-column:2;grid-row:9}.archive-grid .card-science{grid-column:1/3;grid-row:10}}
