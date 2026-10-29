@@ -69,7 +69,7 @@ const dialogueNotes=id=>notes.filter(note=>note.dialogue===id);
 function platoPage(){
   const plato=philosophers.find(item=>item.id==='plato'),index=philosophers.indexOf(plato);
   const previous=philosophers[(index+philosophers.length-1)%philosophers.length],next=philosophers[(index+1)%philosophers.length];
-  const cards=platoDialogues.map(dialogue=>({...dialogue,href:`#/dialogue/${dialogue.id}`,meta:dialogue.id==='republic'?`10 ${libraryText('bookShort')}`:`${dialogueNotes(dialogue.id).length} ${text('materialShort')}`}));
+  const cards=platoDialogues.map(dialogue=>{const items=dialogueNotes(dialogue.id);return {...dialogue,href:dialogue.id!=='republic'&&items.length===1&&localNoteIds.has(items[0].id)?`#/note/${items[0].id}`:`#/dialogue/${dialogue.id}`,meta:dialogue.id==='republic'?`10 ${libraryText('bookShort')}`:`${items.length} ${text('materialShort')}`}});
   main.innerHTML=`<section class="subpage philosopher-page"><a class="back-link" href="#/section/philosophy"><span aria-hidden="true">←</span>${label(sections.find(item=>item.id==='philosophy'))}</a><div class="eyebrow">${philosophyText('philosophers')} — ${String(index+1).padStart(2,'0')} / ${philosophers.length} · ${platoDialogues.length} ${libraryText('dialogueShort')}</div><h1>${label(plato)}</h1><p class="section-description">${libraryText('dialogues')}</p>${renderArchiveBlocks(cards)}<nav class="section-navigation" aria-label="${philosophyText('philosophers')}"><a href="#/philosopher/${previous.id}"><span class="nav-caption">${philosophyText('previous')}</span>← ${label(previous)}</a><a href="#/philosopher/${next.id}"><span class="nav-caption">${philosophyText('next')}</span>${label(next)} →</a></nav></section>`;
   document.title=`${label(plato)} — ARCHIVUM`;
 }
