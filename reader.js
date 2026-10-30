@@ -22,7 +22,7 @@ function scrollReaderAnchor(){
   const route=readerRoute();
   if(route.type!=='note'||main.dataset.noteId!==route.id||!document.getElementById('reader-body'))return false;
   if(!route.anchor){window.scrollTo({top:0,behavior:'instant'});return true}
-  if(!/^s-\d+$/.test(route.anchor))return false;
+  if(!/^s-\d+$/.test(route.anchor)&&!(route.id==='painting-favourites'&&/^art-[a-z0-9-]+$/.test(route.anchor)))return false;
   const heading=document.getElementById(route.anchor);
   if(!heading)return false;
   if(document.getElementById('roadmap-search')?.value&&resetRoadmapSearch)resetRoadmapSearch();

@@ -18,8 +18,8 @@
 .art-collection .art-bio-section{border-top:1px solid var(--line);padding:14px 0}.art-collection .art-bio-title{font:27px/1.25 var(--serif);color:var(--ink);margin:0 0 12px}
 .art-collection .art-painting-section{border-top:1px solid var(--line);padding:32px 0 18px;margin-top:30px}
 .art-collection .art-painting-title{font:34px/1.2 var(--serif);color:var(--ink);margin:0 0 10px}.art-collection .art-painting-year{display:block;margin:0 0 20px}
-.art-zoom-trigger{display:block;max-width:100%;margin:25px auto 32px;padding:0;border:0;background:transparent;cursor:zoom-in}
-.art-collection .art-zoom-trigger img{display:block;width:auto;height:auto;max-width:100%;max-height:950px;object-fit:contain;margin:0;filter:none;opacity:1;cursor:zoom-in;border:0;border-radius:0}
+.art-zoom-trigger{display:block;width:100%;max-width:100%;margin:25px auto 32px;padding:0;border:0;background:transparent;cursor:zoom-in}
+.art-collection .art-zoom-trigger img{display:block;width:100%;height:auto;max-width:100%;max-height:950px;object-fit:contain;margin:0;filter:none;opacity:1;cursor:zoom-in;border:0;border-radius:0}
 .art-collection .art-analysis-title{font:25px/1.3 var(--serif);margin:24px 0 12px;color:var(--gold)}
 .art-collection .art-analysis-content{border-left:1px solid var(--line);padding-left:20px}.art-collection .art-links-title{font:10px/1.8 var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px}
 .art-collection .art-painting-links{border-top:1px solid var(--line);padding-top:18px;margin-top:24px}.art-collection .art-painting-link{display:inline-block;font:15px/1.5 var(--reading);margin:0 18px 10px 0;color:var(--muted)}
