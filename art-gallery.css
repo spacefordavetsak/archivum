@@ -1,0 +1,30 @@
+.art-gallery-page .reader-layout{grid-template-columns:210px minmax(0,1fr);gap:clamp(30px,4vw,65px)}
+.art-gallery-page .note-body{--panel:#15130f;color:var(--ink)}
+.art-collection{font-size:22px;line-height:1.65}
+.art-collection [hidden]{display:none!important}
+.art-search{border-bottom:1px solid var(--line);padding:0 0 28px;margin-bottom:35px}
+.art-search label{display:block;font:10px/1.8 var(--mono);text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:15px}
+.art-search>div{display:flex;gap:15px}.art-search input{width:100%;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;color:var(--ink);font:23px var(--reading);padding:12px 0}
+.art-search button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:10px 15px;font:14px var(--reading);cursor:pointer}.art-search [role=status]{font:14px var(--reading);margin:12px 0 0;color:var(--muted)}
+.art-collection .art-hero{display:grid;gap:25px}.art-collection .art-aside{border-left:1px solid var(--line);padding-left:22px;color:var(--muted)}
+.art-collection .art-toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:25px 0 35px}
+.art-collection .art-toc a{padding:14px 16px;border:1px solid var(--line);text-decoration:none;font:23px/1.2 var(--serif);transition:background .2s}.art-collection .art-toc a:hover{background:var(--panel);color:var(--gold)}
+.art-collection a[aria-disabled]{opacity:.4;cursor:default}
+.art-collection .art-artist-section{padding-top:28px;margin:55px 0 80px;scroll-margin-top:90px;border-top:1px solid var(--gold)}
+.art-collection .art-artist-header{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:baseline;margin-bottom:30px}
+.art-collection .art-artist-name{border:0;margin:0;padding:0;font:43px/1.12 var(--serif);color:var(--gold)}
+.art-collection .art-artist-period,.art-collection .art-painting-year,.art-collection .art-badge,.art-collection .art-fav-ribbon{font:10px/1.8 var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.art-collection .art-artist-bio{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:35px}
+.art-collection .art-bio-section{border-top:1px solid var(--line);padding:14px 0}.art-collection .art-bio-title{font:27px/1.25 var(--serif);color:var(--ink);margin:0 0 12px}
+.art-collection .art-painting-section{border-top:1px solid var(--line);padding:32px 0 18px;margin-top:30px}
+.art-collection .art-painting-title{font:34px/1.2 var(--serif);color:var(--ink);margin:0 0 10px}.art-collection .art-painting-year{display:block;margin:0 0 20px}
+.art-zoom-trigger{display:block;max-width:100%;margin:25px auto 32px;padding:0;border:0;background:transparent;cursor:zoom-in}
+.art-collection .art-zoom-trigger img{display:block;width:auto;height:auto;max-width:100%;max-height:950px;object-fit:contain;margin:0;filter:none;opacity:1;cursor:zoom-in;border:0;border-radius:0}
+.art-collection .art-analysis-title{font:25px/1.3 var(--serif);margin:24px 0 12px;color:var(--gold)}
+.art-collection .art-analysis-content{border-left:1px solid var(--line);padding-left:20px}.art-collection .art-links-title{font:10px/1.8 var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px}
+.art-collection .art-painting-links{border-top:1px solid var(--line);padding-top:18px;margin-top:24px}.art-collection .art-painting-link{display:inline-block;font:15px/1.5 var(--reading);margin:0 18px 10px 0;color:var(--muted)}
+.art-image-dialog{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;padding:0;margin:0;border:0;background:#050504;color:var(--ink);overflow:hidden}.art-image-dialog::backdrop{background:#000e}
+.art-image-bar{display:flex;gap:20px;align-items:center;padding:15px 24px;border-bottom:1px solid var(--line);min-height:70px}.art-image-bar p{margin:0;flex:1;font:21px/1.2 var(--serif)}.art-image-bar a{font:14px var(--reading);color:var(--gold);white-space:nowrap}.art-image-bar button{background:none;border:0;color:var(--ink);font-size:32px;cursor:pointer;padding:0 10px}
+.art-image-stage{height:calc(100dvh - 85px);overflow:auto;display:grid;place-items:center;padding:16px}.art-image-stage .art-full-image{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 120px);cursor:zoom-in;filter:none}.art-image-stage.art-native-size{display:block}.art-native-size .art-full-image{max-width:none;max-height:none;cursor:zoom-out;margin:auto}
+@media(max-width:900px){.art-gallery-page .reader-layout{display:block}.art-collection .art-artist-bio{grid-template-columns:1fr}}
+@media(max-width:600px){.art-collection{font-size:21px}.art-collection .art-toc{grid-template-columns:1fr}.art-collection .art-artist-name{font-size:36px}.art-collection .art-painting-title{font-size:29px}.art-collection .art-artist-section{margin-bottom:50px}.art-search>div{gap:8px}.art-search input{font-size:21px}.art-search button{padding:8px}.art-image-bar{padding:12px;gap:10px}.art-image-bar p{font-size:18px}.art-image-bar a{font-size:12px}.art-image-stage{padding:8px}}

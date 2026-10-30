@@ -1,4 +1,4 @@
-const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis','plato-republic-1-analysis','plato-republic-2-analysis','plato-republic-3-analysis','plato-republic-4-analysis','plato-apology-analysis','plato-alcibiades-ii-analysis','plato-theages-analysis']);
+const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis','plato-republic-1-analysis','plato-republic-2-analysis','plato-republic-3-analysis','plato-republic-4-analysis','plato-apology-analysis','plato-alcibiades-ii-analysis','plato-theages-analysis','painting-favourites']);
 const readingCache = new Map();
 let readerRenderNumber = 0;
 const readerCopy = {
@@ -59,8 +59,9 @@ async function notePage(id){
     document.getElementById('reader-meta').innerHTML=`<span>${readerText('originalLanguage')}</span><span>${Math.ceil(data.words/200)} ${readerText('minutes')}</span><span>${readerPartCount(parts)}</span>`;
     document.getElementById('reader-content').innerHTML=`<div class="reader-layout"><aside class="reader-sidebar"><details class="reader-contents"${matchMedia('(min-width: 901px)').matches?' open':''}><summary>${readerText('contents')}<span aria-hidden="true">＋</span></summary><div class="reader-contents-inner"><input type="search" id="reader-toc-search" placeholder="${readerText('findChapter')}" aria-label="${readerText('chapterSearch')}" autocomplete="off"><nav aria-label="${readerText('contents')}"><ul id="reader-toc-links"></ul></nav></div></details><a class="reader-top-link" href="#/note/${id}">${readerText('start')} ↑</a></aside><article id="reader-body" class="note-body" lang="ru" aria-label="${escapeHTML(note.ru)}">${data.html}</article></div>`;
     drawContents(note,data);
-    enhanceNoteVisuals(document.getElementById('reader-body'));
+    if(note.id!=='painting-favourites')enhanceNoteVisuals(document.getElementById('reader-body'));
     installRoadmapSearch(document.getElementById('reader-body'));
+    installArtGallery(document.getElementById('reader-body'),note,data);
     installReaderMobileTools(note,data);
     document.getElementById('reader-toc-search').addEventListener('input',event=>drawContents(note,data,event.target.value));
     scrollReaderAnchor();
