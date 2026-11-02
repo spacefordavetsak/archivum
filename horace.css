@@ -4,3 +4,5 @@
 .note-body .horace-poem h2{margin-top:0}.horace-poem-credit{color:var(--muted);font:10px/1.8 var(--mono);letter-spacing:1px;text-transform:uppercase;margin:20px 0 40px!important}.note-body .horace-stanza{font:24px/1.7 var(--reading);margin:0 0 28px;white-space:normal}@media(max-width:600px){.note-body .horace-stanza{font-size:20px;line-height:1.65;overflow-wrap:normal}}
 
 .derzhavin-portrait{margin:55px 0 65px;max-width:430px;border:1px solid var(--line);overflow:hidden}.derzhavin-portrait img{display:block;width:100%;max-height:570px;object-fit:cover;object-position:center 24%;filter:grayscale(100%) brightness(.8) contrast(1.06)}@media(max-width:700px){.derzhavin-portrait{margin:36px 0 45px;max-width:100%}.derzhavin-portrait img{max-height:480px}}
+
+.derzhavin-feature img{max-height:570px;object-position:center 24%;filter:grayscale(100%) brightness(.8) contrast(1.06)}.derzhavin-feature blockquote p{font-size:clamp(23px,2.65vw,36px);line-height:1.5}@media(max-width:700px){.derzhavin-feature blockquote p{font-size:clamp(21px,4.9vw,30px)}.derzhavin-feature img{max-height:480px}}
