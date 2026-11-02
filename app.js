@@ -98,8 +98,8 @@ function render(){
   const route=location.hash.replace(/^#\/?/,'').split('/');
   document.body.classList.toggle('is-reading',route[0]==='note');
   document.body.classList.toggle('is-science',route[0]==='section'&&route[1]==='science');
-  document.body.classList.toggle('is-home',!['note','section','philosopher','collection','dialogue','historian','poet'].includes(route[0]));
-  if(route[0]==='note')notePage(route[1]);else {delete main.dataset.noteId;if(route[0]==='section')sectionPage(route[1]);else if(route[0]==='philosopher')philosopherPage(route[1]);else if(route[0]==='collection')collectionPage(route[1]);else if(route[0]==='dialogue')dialoguePage(route[1],route[2]);else if(route[0]==='historian')historianPage(route[1]);else if(route[0]==='poet')poetPage(route[1]);else home();}
+  document.body.classList.toggle('is-home',!['note','section','philosopher','collection','dialogue','historian','poet','poem'].includes(route[0]));
+  if(route[0]==='note')notePage(route[1]);else {delete main.dataset.noteId;if(route[0]==='section')sectionPage(route[1]);else if(route[0]==='philosopher')philosopherPage(route[1]);else if(route[0]==='collection')collectionPage(route[1]);else if(route[0]==='dialogue')dialoguePage(route[1],route[2]);else if(route[0]==='historian')historianPage(route[1]);else if(route[0]==='poet')poetPage(route[1]);else if(route[0]==='poem'&&route[1]==='derzhavin')derzhavinWorkPage(route[2]);else home();}
   if(searchDialog.open)renderSearch();
 }
 function normalize(value){return value.toLocaleLowerCase().replace(/ё/g,'е').normalize('NFKC').trim()}

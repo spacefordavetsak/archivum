@@ -8,7 +8,7 @@ const poets=[
   {id:'bunin',ru:'Бунин Иван Алексеевич',en:'Ivan Alekseyevich Bunin'},
   {id:'gamzatov',ru:'Гамзатов Расул Гамзатович',en:'Rasul Gamzatovich Gamzatov'},
   {id:'gaft',ru:'Гафт Валентин Иосифович',en:'Valentin Iosifovich Gaft'},
-  {id:'derzhavin',ru:'Державин Гавриил Романович',en:'Gavriil Romanovich Derzhavin'},
+  {id:'derzhavin',ru:'Державин Гавриил Романович',en:'Gavriil Romanovich Derzhavin',image:'assets/derzhavin-portrait.jpg',imagePosition:'center 30%'},
   {id:'yevtushenko',ru:'Евтушенко Евгений Александрович',en:'Yevgeny Aleksandrovich Yevtushenko'},
   {id:'yesenin',ru:'Есенин Сергей Александрович',en:'Sergey Aleksandrovich Yesenin'},
   {id:'zhukovsky',ru:'Жуковский Василий Андреевич',en:'Vasily Andreyevich Zhukovsky'},
@@ -25,8 +25,10 @@ const poetryCopy={
 };
 const poetryText=key=>poetryCopy[language][key];
 const poetNotes=id=>notes.filter(note=>note.poet===id);
+const derzhavinWorks=[{id:'velmozha',ru:'Вельможа',en:'The Grandee'},{id:'meshchersky',ru:'На смерть князя Мещерского',en:'On the Death of Prince Meshchersky'}];
+const poetCount=id=>poetNotes(id).length+(id==='derzhavin'?derzhavinWorks.length:0);
 function poetryPage(section){
-  const cards=poets.map(poet=>({...poet,href:`#/poet/${poet.id}`,meta:`${poetNotes(poet.id).length} ${text('materialShort')}`}));
+  const cards=poets.map(poet=>({...poet,href:`#/poet/${poet.id}`,meta:`${poetCount(poet.id)} ${text('materialShort')}`}));
   main.innerHTML=`<section class="subpage poetry-page"><a class="back-link" href="#/"><span aria-hidden="true">←</span>${text('home')}</a><div class="eyebrow">${text('sections')} — 03 / ${sections.length} · ${poets.length} ${poetryText('poetShort')}</div><h1>${label(section)}</h1><p class="section-description">${desc(section)}</p>${renderArchiveBlocks(cards)}${sectionNavigation(section)}</section>`;
   document.title=`${label(section)} — ARCHIVUM`;
 }
@@ -35,6 +37,13 @@ function poetPage(id){
   if(!author){main.innerHTML=`<section class="subpage"><h1>${text('notFound')}</h1><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></section>`;return}
   const index=poets.indexOf(author),items=poetNotes(id),section=sections.find(item=>item.id==='poetry');
   const previous=poets[(index+poets.length-1)%poets.length],next=poets[(index+1)%poets.length];
-  main.innerHTML=`<section class="subpage poet-page"><a class="back-link" href="#/section/poetry"><span aria-hidden="true">←</span>${label(section)}</a><div class="eyebrow">${poetryText('poets')} — ${String(index+1).padStart(2,'0')} / ${poets.length} · ${items.length} ${text('materialShort')}</div><h1>${label(author)}</h1><p class="section-description">${poetryText('collection')}</p>${id==='horace'?`<div class="horace-feature"><figure><img src="assets/horace-portrait.png" alt="Художественное изображение бюста Горация" loading="eager"><figcaption>${language==='ru'?'Художественная интерпретация':'Artistic interpretation'}</figcaption></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p>Какая польза в напрасных законах там, где нет нравов? Что значат пустые законы без обычаев?</p><cite>Квинт Гораций Флак</cite></blockquote></div>`:''}${items.length?materialList(items):`<div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${poetryText('empty')}</p><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></div>`}<nav class="section-navigation" aria-label="${poetryText('poets')}"><a href="#/poet/${previous.id}"><span class="nav-caption">${poetryText('previous')}</span>← ${label(previous)}</a><a href="#/poet/${next.id}"><span class="nav-caption">${poetryText('next')}</span>${label(next)} →</a></nav></section>`;
+  main.innerHTML=`<section class="subpage poet-page"><a class="back-link" href="#/section/poetry"><span aria-hidden="true">←</span>${label(section)}</a><div class="eyebrow">${poetryText('poets')} — ${String(index+1).padStart(2,'0')} / ${poets.length} · ${poetCount(id)} ${text('materialShort')}</div><h1>${label(author)}</h1><p class="section-description">${poetryText('collection')}</p>${id==='horace'?`<div class="horace-feature"><figure><img src="assets/horace-portrait.png" alt="Художественное изображение бюста Горация" loading="eager"><figcaption>${language==='ru'?'Художественная интерпретация':'Artistic interpretation'}</figcaption></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p>Какая польза в напрасных законах там, где нет нравов? Что значат пустые законы без обычаев?</p><cite>Квинт Гораций Флак</cite></blockquote></div>`:''}${id==='derzhavin'?`<div class="derzhavin-portrait"><img src="assets/derzhavin-portrait.jpg" alt="Портрет Гавриила Романовича Державина"></div>${renderArchiveBlocks(derzhavinWorks.map(work=>({...work,href:`#/poem/derzhavin/${work.id}`,meta:`0 ${text('materialShort')}`})))}`:items.length?materialList(items):`<div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${poetryText('empty')}</p><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></div>`}<nav class="section-navigation" aria-label="${poetryText('poets')}"><a href="#/poet/${previous.id}"><span class="nav-caption">${poetryText('previous')}</span>← ${label(previous)}</a><a href="#/poet/${next.id}"><span class="nav-caption">${poetryText('next')}</span>${label(next)} →</a></nav></section>`;
   document.title=`${label(author)} — ARCHIVUM`;
+}
+
+function derzhavinWorkPage(id){
+  const work=derzhavinWorks.find(item=>item.id===id);
+  if(!work){poetPage('derzhavin');return}
+  main.innerHTML=`<section class="subpage"><a class="back-link" href="#/poet/derzhavin"><span aria-hidden="true">←</span>${language==='ru'?'Державин Гавриил Романович':'Gavriil Romanovich Derzhavin'}</a><div class="eyebrow">${poetryText('poets')} · 0 ${text('materialShort')}</div><h1>${label(work)}</h1><div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${language==='ru'?'Здесь появится текст произведения.':'The text will appear here.'}</p><a class="underlined-link" href="#/poet/derzhavin">${language==='ru'?'К Державину':'Back to Derzhavin'}</a></div></section>`;
+  document.title=`${label(work)} — ARCHIVUM`;
 }
