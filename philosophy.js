@@ -13,6 +13,8 @@ const philosophyCopy = {
 const philosophyText=key=>philosophyCopy[language][key];
 const philosopherNotes=id=>notes.filter(note=>note.philosopher===id);
 function noteCollection(note){
+  const poet=poets.find(item=>item.id===note.poet);
+  if(poet)return {href:`#/poet/${poet.id}`,name:label(poet)};
   const dialogue=platoDialogues.find(item=>item.id===note.dialogue);
   if(dialogue)return {href:`#/dialogue/${dialogue.id}`,name:label(dialogue)};
   const historian=historians.find(item=>item.id===note.historian);
