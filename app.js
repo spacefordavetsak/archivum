@@ -17,6 +17,7 @@ const sections = [
   { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
+  {section:'poetry',poet:'derzhavin',id:'derzhavin-velmozha',ru:'Вельможа',en:'The Grandee',ruDesc:'Гавриил Романович Державин · 1794.',enDesc:'Gavriil Romanovich Derzhavin · 1794.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-meshchersky',ru:'На смерть князя Мещерского',en:'On the Death of Prince Meshchersky',ruDesc:'Гавриил Романович Державин.',enDesc:'Gavriil Romanovich Derzhavin.'},
   {section:'poetry',poet:'horace',id:'horace-to-melpomene',ru:'К Мельпомене',en:'To Melpomene',ruDesc:'Квинт Гораций Флак. Русский перевод и латинский оригинал.',enDesc:'Quintus Horatius Flaccus. Russian translation and Latin original.'},
   {section:'poetry',poet:'horace',id:'horace-to-romans',ru:'К римлянам',en:'To the Romans',ruDesc:'Квинт Гораций Флак. Перевод Афанасия Фета.',enDesc:'Quintus Horatius Flaccus. Translated into Russian by Afanasy Fet.'},
