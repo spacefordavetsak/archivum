@@ -17,6 +17,8 @@ const sections = [
   { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
+  {section:'philosophy',philosopher:'plato',dialogue:'menexenus',id:'plato-menexenus-analysis',ru:'Менексен — Критический анализ',en:'Menexenus — Critical analysis',ruDesc:'Критический анализ диалога «Менексен».',enDesc:'A critical analysis of Menexenus.'},
+  {section:'philosophy',philosopher:'plato',dialogue:'euthydemus',id:'plato-euthydemus-analysis',ru:'Евтидем — Критический анализ',en:'Euthydemus — Critical analysis',ruDesc:'Критический анализ диалога «Евтидем».',enDesc:'A critical analysis of Euthydemus.'},
   {section:'philosophy',philosopher:'plato',dialogue:'theages',id:'plato-theages-analysis',ru:'Феаг — Критический анализ',en:'Theages — Critical analysis',ruDesc:'Критический анализ диалога «Феаг».',enDesc:'A critical analysis of Theages.'},
   {section:'philosophy',philosopher:'plato',dialogue:'apology',id:'plato-apology-analysis',ru:'Апология Сократа — Критический анализ',en:'Apology of Socrates — Critical analysis',ruDesc:'Критический анализ «Апологии Сократа» Платона.',enDesc:'A critical analysis of Plato’s Apology of Socrates.'},
   {section:'philosophy',philosopher:'plato',dialogue:'alcibiades-ii',id:'plato-alcibiades-ii-analysis',ru:'Алкивиад II — Критический анализ',en:'Alcibiades II — Critical analysis',ruDesc:'Критический анализ диалога «Алкивиад II».',enDesc:'A critical analysis of Alcibiades II.'},
