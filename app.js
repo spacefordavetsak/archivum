@@ -17,6 +17,7 @@ const sections = [
   { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
+  {section:'poetry',poet:'horace',id:'horace-to-melpomene',ru:'К Мельпомене',en:'To Melpomene',ruDesc:'Квинт Гораций Флак. Русский перевод и латинский оригинал.',enDesc:'Quintus Horatius Flaccus. Russian translation and Latin original.'},
   {section:'poetry',poet:'horace',id:'horace-to-romans',ru:'К римлянам',en:'To the Romans',ruDesc:'Квинт Гораций Флак. Перевод Афанасия Фета.',enDesc:'Quintus Horatius Flaccus. Translated into Russian by Afanasy Fet.'},
   {section:'philosophy',philosopher:'plato',dialogue:'menexenus',id:'plato-menexenus-analysis',ru:'Менексен — Критический анализ',en:'Menexenus — Critical analysis',ruDesc:'Критический анализ диалога «Менексен».',enDesc:'A critical analysis of Menexenus.'},
   {section:'philosophy',philosopher:'plato',dialogue:'euthydemus',id:'plato-euthydemus-analysis',ru:'Евтидем — Критический анализ',en:'Euthydemus — Critical analysis',ruDesc:'Критический анализ диалога «Евтидем».',enDesc:'A critical analysis of Euthydemus.'},
