@@ -42,7 +42,7 @@ function poetPage(id){
 }
 
 function derzhavinWorkPage(id){
-  if(id==='meshchersky'){notePage('derzhavin-meshchersky');return}
+  if(id==='meshchersky'){location.replace('#/note/derzhavin-meshchersky');return}
   const work=derzhavinWorks.find(item=>item.id===id);
   if(!work){poetPage('derzhavin');return}
   main.innerHTML=`<section class="subpage"><a class="back-link" href="#/poet/derzhavin"><span aria-hidden="true">←</span>${language==='ru'?'Державин Гавриил Романович':'Gavriil Romanovich Derzhavin'}</a><div class="eyebrow">${poetryText('poets')} · 0 ${text('materialShort')}</div><h1>${label(work)}</h1><div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${language==='ru'?'Здесь появится текст произведения.':'The text will appear here.'}</p><a class="underlined-link" href="#/poet/derzhavin">${language==='ru'?'К Державину':'Back to Derzhavin'}</a></div></section>`;
