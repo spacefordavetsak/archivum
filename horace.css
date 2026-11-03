@@ -6,3 +6,5 @@
 .derzhavin-portrait{margin:55px 0 65px;max-width:430px;border:1px solid var(--line);overflow:hidden}.derzhavin-portrait img{display:block;width:100%;max-height:570px;object-fit:cover;object-position:center 24%;filter:grayscale(100%) brightness(.8) contrast(1.06)}@media(max-width:700px){.derzhavin-portrait{margin:36px 0 45px;max-width:100%}.derzhavin-portrait img{max-height:480px}}
 
 .derzhavin-feature img{max-height:570px;object-position:center 24%;filter:grayscale(100%) brightness(.8) contrast(1.06)}.derzhavin-feature blockquote p{font-size:clamp(23px,2.65vw,36px);line-height:1.5}@media(max-width:700px){.derzhavin-feature blockquote p{font-size:clamp(21px,4.9vw,30px)}.derzhavin-feature img{max-height:480px}}
+
+.note-body .horace-poem-speaker{font:italic 22px/1.5 var(--serif);color:var(--gold);margin:38px 0 14px}
