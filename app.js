@@ -17,6 +17,7 @@ const sections = [
   { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
+  {section:'poetry',poet:'derzhavin',id:'derzhavin-separation',ru:'Разлука',en:'Separation',ruDesc:'Гавриил Романович Державин · 1776.',enDesc:'Gavriil Romanovich Derzhavin · 1776.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-river-of-time',ru:'Река времён в своём стремленьи',en:'The River of Time',ruDesc:'Гавриил Романович Державин · 1816.',enDesc:'Gavriil Romanovich Derzhavin · 1816.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-plamide',ru:'Пламиде',en:'To Plamida',ruDesc:'Гавриил Романович Державин.',enDesc:'Gavriil Romanovich Derzhavin.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-velmozha',ru:'Вельможа',en:'The Grandee',ruDesc:'Гавриил Романович Державин · 1794.',enDesc:'Gavriil Romanovich Derzhavin · 1794.'},
