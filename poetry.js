@@ -70,8 +70,9 @@ const poetProfiles = {
     ru: {
       dates: '1743–1816',
       biography: [
-        'Гавриил Романович Державин родился близ Казани в небогатой дворянской семье. Учился в Казанской гимназии, служил в Преображенском полку и участвовал в подавлении Пугачёвского восстания. Широкую известность ему принесла «Фелица», ода Екатерине II.',
-        'Державин возглавлял Олонецкое и Тамбовское наместничества, был кабинет-секретарём Екатерины II, а при Александре I стал первым министром юстиции. После отставки в 1803 году продолжал писать, подолгу жил в усадьбе Званка. В 1815 году он услышал выступление юного Пушкина на лицейском экзамене.'
+        'Гавриил Романович Державин родился под Казанью в небогатой дворянской семье. В Казанской гимназии он читал Ломоносова и Сумарокова и пробовал сочинять стихи. В 1762 году поступил рядовым в Преображенский полк, а во время Пугачёвского восстания работал в следственной комиссии на Волге.',
+        'Известность принесла ему ода «Фелица», посвящённая Екатерине II. Державин управлял Олонецким и Тамбовским наместничествами. При нём в Тамбове открылись театр и типография. Позднее он стал кабинет-секретарём Екатерины II, а при Александре I возглавил Министерство юстиции. Его стихотворение «Гром победы, раздавайся!» на музыку Осипа Козловского стало неофициальным гимном.',
+        'После отставки в 1803 году Державин подолгу жил в Званке. Он писал пьесы и басни, работал над трактатом об оде и участвовал в создании «Беседы любителей русского слова». В 1815 году на лицейском экзамене он услышал стихи юного Пушкина. В Званке поэт умер в 1816 году, оставив незавершённым стихотворение «Река времён в своём стремленьи…».'
       ],
       traits: [
         ['Ода и сатира в одном стихотворении', 'В «Фелице» хвала Екатерине соседствует с иронией над придворными и самим рассказчиком. Разговорные обороты и бытовые сцены придают торжественной оде живой голос.'],
@@ -83,8 +84,9 @@ const poetProfiles = {
     en: {
       dates: '1743–1816',
       biography: [
-        'Gavriil Romanovich Derzhavin was born near Kazan to a family of modest means and noble rank. He attended the Kazan Gymnasium, served in the Preobrazhensky Regiment and took part in suppressing Pugachev’s rebellion. Felitsa, an ode to Catherine II, brought him wide recognition.',
-        'Derzhavin governed Olonets and Tambov, served as Catherine II’s cabinet secretary and became the first minister of justice under Alexander I. After retiring in 1803, he continued to write and spent much of his time at his estate in Zvanka. In 1815 he heard the young Pushkin recite at a Lyceum examination.'
+        'Gavriil Romanovich Derzhavin was born near Kazan into a noble family of modest means. At the Kazan Gymnasium he read Lomonosov and Sumarokov and began writing verse. He enlisted as a private in the Preobrazhensky Regiment in 1762 and served on an investigative commission on the Volga during Pugachev’s rebellion.',
+        'Felitsa, an ode to Catherine II, made him widely known. Derzhavin governed Olonets and Tambov. A theatre and printing press opened in Tambov during his tenure. He later served as Catherine’s cabinet secretary and headed the Ministry of Justice under Alexander I. His poem Let the Thunder of Victory Sound!, set to music by Osip Kozlovsky, became an unofficial anthem.',
+        'After retiring in 1803, Derzhavin spent much of his time at Zvanka. He wrote plays and fables, worked on a treatise on the ode and helped found the literary society known as the Colloquy of Lovers of the Russian Word. In 1815 he heard the young Pushkin recite at a Lyceum examination. He died at Zvanka in 1816, leaving The River of Time unfinished.'
       ],
       traits: [
         ['Ode and satire in the same poem', 'In Felitsa, praise of Catherine sits alongside jokes at the expense of courtiers and the speaker himself. Everyday scenes and turns of phrase give the ceremonial ode a lively voice.'],
@@ -94,6 +96,7 @@ const poetProfiles = {
       ]
     },
     sources: [
+      {ru:'Культура.РФ — биография Державина',en:'Culture.ru — Derzhavin’s biography',url:'https://www.culture.ru/persons/8946/gavriil-derzhavin'},
       {ru:'Президентская библиотека',en:'Presidential Library',url:'https://www.prlib.ru/Great_Russia/cultural_XVIII/Derzhavin'},
       {ru:'Татарская энциклопедия',en:'Tatar Encyclopedia',url:'https://tatarica.org/ru/razdely/kultura/literatura/personalii/derzhavin-gavriil'},
       {ru:'Серия «Литературные памятники»',en:'Literary Monuments series',url:'https://litpamyatniki.ru/library/368'}
