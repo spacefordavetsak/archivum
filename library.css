@@ -50,8 +50,11 @@
 .internal-grid .collection-card[href="#/philosopher/epictetus"]::before{background:linear-gradient(180deg,rgba(5,5,4,.24),rgba(5,5,4,.08) 36%,rgba(5,5,4,.84))}
 .internal-grid .collection-card[href="#/philosopher/epictetus"] h2{text-shadow:0 2px 18px #000a}
 .internal-grid .collection-card[href="#/collection/christianity"] img{filter:grayscale(.6) sepia(.14) saturate(.72) brightness(.95)}
-.internal-grid .collection-card[href="#/collection/christianity"]::before{background:linear-gradient(180deg,rgba(5,5,4,.15),rgba(5,5,4,.05) 36%,rgba(5,5,4,.2) 65%,rgba(5,5,4,.85))}
-.internal-grid .collection-card[href="#/collection/christianity"] h2{text-shadow:0 2px 18px #000a}
+.internal-grid .collection-card[href="#/collection/islam"] img{filter:grayscale(.38) sepia(.08) saturate(.9) brightness(.98)}
+.internal-grid .collection-card[href="#/collection/christianity"]::before,
+.internal-grid .collection-card[href="#/collection/islam"]::before{background:linear-gradient(180deg,rgba(5,5,4,.15),rgba(5,5,4,.05) 36%,rgba(5,5,4,.2) 65%,rgba(5,5,4,.85))}
+.internal-grid .collection-card[href="#/collection/christianity"] h2,
+.internal-grid .collection-card[href="#/collection/islam"] h2{text-shadow:0 2px 18px #000a}
 .home-library .card-essays img{object-position:center 48%;filter:grayscale(.65) sepia(.14) saturate(.75) brightness(.92)}
 .home-library .card-essays.has-image::before{background:linear-gradient(180deg,rgba(5,5,4,.2),rgba(5,5,4,.08) 35%,rgba(5,5,4,.8))}
 .home-library .card-essays h2{text-shadow:0 2px 18px #000a}
