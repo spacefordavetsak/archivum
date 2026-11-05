@@ -8,7 +8,17 @@ const religionCollections=[
   {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
   {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
 ];
-const archiveCollections=()=>[...philosophyCollections,...historyCollections,...religionCollections];
+const literatureCollections=[
+  {id:'literature-antiquity',section:'literature',ru:'Античность',en:'Classical Antiquity',ruDesc:'Произведения и авторы Древней Греции и Рима.',enDesc:'Works and authors of ancient Greece and Rome.'},
+  {id:'literature-french',section:'literature',ru:'Французская литература',en:'French Literature',ruDesc:'Произведения и авторы французской литературы.',enDesc:'Works and authors of French literature.'},
+  {id:'literature-english',section:'literature',ru:'Английская литература',en:'English Literature',ruDesc:'Произведения и авторы английской литературы.',enDesc:'Works and authors of English literature.'},
+  {id:'literature-german',section:'literature',ru:'Немецкая литература',en:'German Literature',ruDesc:'Произведения и авторы немецкой литературы.',enDesc:'Works and authors of German literature.'},
+  {id:'literature-italian',section:'literature',ru:'Итальянская литература',en:'Italian Literature',ruDesc:'Произведения и авторы итальянской литературы.',enDesc:'Works and authors of Italian literature.'},
+  {id:'literature-american',section:'literature',ru:'Американская литература',en:'American Literature',ruDesc:'Произведения и авторы американской литературы.',enDesc:'Works and authors of American literature.'},
+  {id:'literature-spanish',section:'literature',ru:'Испанская литература',en:'Spanish Literature',ruDesc:'Произведения и авторы испанской литературы.',enDesc:'Works and authors of Spanish literature.'},
+  {id:'literature-russian',section:'literature',ru:'Русская литература',en:'Russian Literature',ruDesc:'Произведения и авторы русской литературы.',enDesc:'Works and authors of Russian literature.'}
+];
+const archiveCollections=()=>[...philosophyCollections,...historyCollections,...religionCollections,...literatureCollections];
 const collectionHref=collection=>collection.noteId?`#/note/${collection.noteId}`:`#/collection/${collection.id}`;
 const platoDialogues=[
   {id:'apology',ru:'Апология Сократа',en:'Apology of Socrates'},
@@ -50,9 +60,9 @@ const libraryCopy={
 };
 const libraryText=key=>libraryCopy[language][key];
 function materialList(items){return renderArchiveBlocks(items.map(note=>({...note,note,meta:`RU · ${noteArrow(note)}`})))}
-function religionPage(section){
-  const cards=religionCollections.map(collection=>({...collection,href:collectionHref(collection),meta:`${notes.filter(note=>note.collection===collection.id).length} ${text('materialShort')}`}));
-  main.innerHTML=`<section class="subpage religion-page"><a class="back-link" href="#/"><span aria-hidden="true">←</span>${text('home')}</a><div class="eyebrow">${text('sections')} — ${String(sections.indexOf(section)+1).padStart(2,'0')} / ${sections.length} · ${count(section.id)} ${text('materialShort')}</div><h1>${label(section)}</h1><p class="section-description">${desc(section)}</p>${renderArchiveBlocks(cards)}${sectionNavigation(section)}</section>`;
+function collectionSectionPage(section,collections){
+  const cards=collections.map(collection=>({...collection,href:collectionHref(collection),meta:`${notes.filter(note=>note.collection===collection.id).length} ${text('materialShort')}`}));
+  main.innerHTML=`<section class="subpage ${section.id}-page"><a class="back-link" href="#/"><span aria-hidden="true">←</span>${text('home')}</a><div class="eyebrow">${text('sections')} — ${String(sections.indexOf(section)+1).padStart(2,'0')} / ${sections.length} · ${count(section.id)} ${text('materialShort')}</div><h1>${label(section)}</h1><p class="section-description">${desc(section)}</p>${renderArchiveBlocks(cards)}${sectionNavigation(section)}</section>`;
   document.title=`${label(section)} — ARCHIVUM`;
 }
 function collectionPage(id){

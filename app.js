@@ -83,7 +83,8 @@ function sectionPage(id){
   if(id==='philosophy'){philosophyPage(section);return}
   if(id==='history'){historyPage(section);return}
   if(id==='poetry'){poetryPage(section);return}
-  if(id==='religion'){religionPage(section);return}
+  if(id==='religion'){collectionSectionPage(section,religionCollections);return}
+  if(id==='literature'){collectionSectionPage(section,literatureCollections);return}
   const index=sections.indexOf(section),items=notes.filter(note=>note.section===id);
   const science=id==='science';
   const previous=sections[(index+sections.length-1)%sections.length],next=sections[(index+1)%sections.length];
