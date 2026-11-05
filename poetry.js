@@ -25,7 +25,7 @@ const poetryCopy={
 };
 const poetryText=key=>poetryCopy[language][key];
 const poetNotes=id=>notes.filter(note=>note.poet===id);
-const derzhavinWorks=[{id:'velmozha',ru:'Вельможа',en:'The Grandee'},{id:'meshchersky',ru:'На смерть князя Мещерского',en:'On the Death of Prince Meshchersky'},{id:'plamide',ru:'Пламиде',en:'To Plamida'},{id:'river-of-time',ru:'Река времён в своём стремленьи',en:'The River of Time'},{id:'separation',ru:'Разлука',en:'Separation'},{id:'philosophers',ru:'Философы, пьяный и трезвый',en:'The Philosophers, Drunk and Sober'},{id:'gift',ru:'Дар',en:'The Gift'},{id:'crown-of-immortality',ru:'Венец бессмертия',en:'The Crown of Immortality'}];
+const derzhavinWorks=[{id:'velmozha',ru:'Вельможа',en:'The Grandee'},{id:'meshchersky',ru:'На смерть князя Мещерского',en:'On the Death of Prince Meshchersky'},{id:'plamide',ru:'Пламиде',en:'To Plamida'},{id:'river-of-time',ru:'Река времён в своём стремленьи',en:'The River of Time'},{id:'separation',ru:'Разлука',en:'Separation'},{id:'philosophers',ru:'Философы, пьяный и трезвый',en:'The Philosophers, Drunk and Sober'},{id:'gift',ru:'Дар',en:'The Gift'},{id:'crown-of-immortality',ru:'Венец бессмертия',en:'The Crown of Immortality'},{id:'sappho',ru:'Сафо',en:'Sappho'}];
 const poetCount=id=>id==='derzhavin'?derzhavinWorks.length:poetNotes(id).length;
 function poetryPage(section){
   const cards=poets.map(poet=>({...poet,href:`#/poet/${poet.id}`,meta:`${poetCount(poet.id)} ${text('materialShort')}`}));
@@ -42,7 +42,7 @@ function poetPage(id){
 }
 
 function derzhavinWorkPage(id){
-  if(['meshchersky','velmozha','plamide','river-of-time','separation','philosophers','gift','crown-of-immortality'].includes(id)){location.replace(`#/note/derzhavin-${id}`);return}
+  if(['meshchersky','velmozha','plamide','river-of-time','separation','philosophers','gift','crown-of-immortality','sappho'].includes(id)){location.replace(`#/note/derzhavin-${id}`);return}
   const work=derzhavinWorks.find(item=>item.id===id);
   if(!work){poetPage('derzhavin');return}
   main.innerHTML=`<section class="subpage"><a class="back-link" href="#/poet/derzhavin"><span aria-hidden="true">←</span>${language==='ru'?'Державин Гавриил Романович':'Gavriil Romanovich Derzhavin'}</a><div class="eyebrow">${poetryText('poets')} · 0 ${text('materialShort')}</div><h1>${label(work)}</h1><div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${language==='ru'?'Здесь появится текст произведения.':'The text will appear here.'}</p><a class="underlined-link" href="#/poet/derzhavin">${language==='ru'?'К Державину':'Back to Derzhavin'}</a></div></section>`;

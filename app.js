@@ -17,6 +17,7 @@ const sections = [
   { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
+  {section:'poetry',poet:'derzhavin',id:'derzhavin-sappho',ru:'Сафо',en:'Sappho',ruDesc:'Гавриил Романович Державин · 1797.',enDesc:'Gavriil Romanovich Derzhavin · 1797.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-crown-of-immortality',ru:'Венец бессмертия',en:'The Crown of Immortality',ruDesc:'Гавриил Романович Державин.',enDesc:'Gavriil Romanovich Derzhavin.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-gift',ru:'Дар',en:'The Gift',ruDesc:'Гавриил Романович Державин.',enDesc:'Gavriil Romanovich Derzhavin.'},
   {section:'poetry',poet:'derzhavin',id:'derzhavin-philosophers',ru:'Философы, пьяный и трезвый',en:'The Philosophers, Drunk and Sober',ruDesc:'Гавриил Романович Державин · 1789.',enDesc:'Gavriil Romanovich Derzhavin · 1789.'},
