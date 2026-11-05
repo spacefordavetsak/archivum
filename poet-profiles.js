@@ -83,7 +83,8 @@ const additionalPoetProfiles = {
     },
     sources: [
       {ru:'Культура.РФ / «Артефакт» — «Опыты в стихах и прозе»',en:'Culture.ru / Artefact — Essays in Verse and Prose',url:'https://ar.culture.ru/ru/subject/opyty-v-stihah-i-proze'},
-      {ru:'Русская виртуальная библиотека — биография и тексты',en:'Russian Virtual Library — biography and texts',url:'https://rvb.ru/batyushkov/index.htm'}
+      {ru:'Русская виртуальная библиотека — биография и тексты',en:'Russian Virtual Library — biography and texts',url:'https://rvb.ru/batyushkov/index.htm'},
+      {ru:'Портрет работы Ореста Кипренского',en:'Portrait by Orest Kiprensky',url:'https://commons.wikimedia.org/wiki/File:Batyushkov.jpg'}
     ]
   },
   boratynsky: {
@@ -111,7 +112,10 @@ const additionalPoetProfiles = {
         ['Compression and precision', 'In Twilight, an argument often turns on a brief opposition or a change in the final lines. The short form gives every word added weight.']
       ]
     },
-    sources: [{ru:'Культура.РФ — Евгений Боратынский (Баратынский)',en:'Culture.ru — Yevgeny Boratynsky',url:'https://www.culture.ru/persons/8212/evgenii-boratynskii-baratynskii'}]
+    sources: [
+      {ru:'Культура.РФ — Евгений Боратынский (Баратынский)',en:'Culture.ru — Yevgeny Boratynsky',url:'https://www.culture.ru/persons/8212/evgenii-boratynskii-baratynskii'},
+      {ru:'Портрет работы Франсуа Шевалье',en:'Portrait by François Chevalier',url:'https://commons.wikimedia.org/wiki/File:Evgeny_Boratynsky_by_Francois_Frederic_Chevalier_(1812-1849).jpg'}
+    ]
   },
   bryusov: {
     ru: {
@@ -303,7 +307,10 @@ const additionalPoetProfiles = {
         ['Translation as poetic craft', 'In The Erlking, Zhukovsky recreates the different voices and the pace of the ride. In the Odyssey, his task is to sustain the long sweep of epic hexameter.']
       ]
     },
-    sources: [{ru:'Культура.РФ — Василий Жуковский',en:'Culture.ru — Vasily Zhukovsky',url:'https://www.culture.ru/persons/9330/vasilii-zhukovskii'}]
+    sources: [
+      {ru:'Культура.РФ — Василий Жуковский',en:'Culture.ru — Vasily Zhukovsky',url:'https://www.culture.ru/persons/9330/vasilii-zhukovskii'},
+      {ru:'Портрет работы Карла Брюллова',en:'Portrait by Karl Bryullov',url:'https://commons.wikimedia.org/wiki/File:Bryullov_portrait_of_Zhukovsky.jpg'}
+    ]
   },
   kipling: {
     ru: {
@@ -360,7 +367,10 @@ const additionalPoetProfiles = {
         ['The lives behind public works', 'In The Railway, a dispute about who built the line brings the workers and their deaths into view. The poem develops its social theme through conversation and a child’s vision.']
       ]
     },
-    sources: [{ru:'Культура.РФ — Николай Некрасов',en:'Culture.ru — Nikolay Nekrasov',url:'https://www.culture.ru/persons/8160/nikolai-nekrasov'}]
+    sources: [
+      {ru:'Культура.РФ — Николай Некрасов',en:'Culture.ru — Nikolay Nekrasov',url:'https://www.culture.ru/persons/8160/nikolai-nekrasov'},
+      {ru:'Портрет работы Ивана Крамского',en:'Portrait by Ivan Kramskoy',url:'https://commons.wikimedia.org/wiki/File:Nekrasov_by_Kramskoy.jpg'}
+    ]
   },
   pasternak: {
     ru: {
@@ -388,6 +398,33 @@ const additionalPoetProfiles = {
       ]
     },
     sources: [{ru:'Культура.РФ — Борис Пастернак',en:'Culture.ru — Boris Pasternak',url:'https://www.culture.ru/persons/9531/boris-pasternak'}]
+  },
+  pushkin: {
+    ru: {
+      dates: '1799–1837',
+      biography: [
+        'Александр Пушкин родился в Москве и учился в Царскосельском лицее. Там он начал печататься и прочитал «Воспоминания в Царском Селе» на экзамене в присутствии Державина. После выпуска служил в Коллегии иностранных дел. В 1820-е годы жил в южной ссылке, затем в Михайловском.',
+        'Осенью 1830 года в Болдине Пушкин завершил работу над основной частью «Евгения Онегина», написал «Повести Белкина» и «Маленькие трагедии». В последние годы работал над «Капитанской дочкой» и основал журнал «Современник». Умер в Петербурге в 1837 году после дуэли с Жоржем Дантесом.'
+      ],
+      traits: [
+        ['Свобода интонации', 'В «Евгении Онегине» рассказ о судьбах героев перемежается воспоминаниями, шутками и обращениями к читателю. Строгая строфа удерживает вместе эти перемены голоса.'],
+        ['Личная судьба и история', 'В «Медном всаднике» история петербургского наводнения разворачивается через бедствие одного человека. Судьба Евгения меняет угол зрения на торжественный образ города.'],
+        ['Лирика памяти', 'В стихотворении «19 октября» лицейская годовщина даёт повод вспомнить друзей и представить их разные судьбы. Личное воспоминание становится разговором о том, как дружба выдерживает разлуку.']
+      ]
+    },
+    en: {
+      dates: '1799–1837',
+      biography: [
+        'Alexander Pushkin was born in Moscow and educated at the Tsarskoye Selo Lyceum. He began publishing there and read Recollections at Tsarskoye Selo at an examination attended by Derzhavin. After graduation he joined the College of Foreign Affairs. In the 1820s he lived in southern exile and then at Mikhaylovskoye.',
+        'In the autumn of 1830 at Boldino, Pushkin finished the main body of Eugene Onegin and wrote The Tales of Belkin and The Little Tragedies. In his last years he worked on The Captain’s Daughter and founded the journal Sovremennik. He died in St Petersburg in 1837 after a duel with Georges d’Anthès.'
+      ],
+      traits: [
+        ['Freedom of tone', 'In Eugene Onegin, memories, jokes and addresses to the reader interrupt the story of the characters. A strict stanza holds these changes of voice together.'],
+        ['Private life and history', 'In The Bronze Horseman, the Petersburg flood is told through one person’s loss. Eugene’s fate changes how we see the city introduced in the poem’s ceremonial opening.'],
+        ['Memory in lyric poetry', 'In 19 October, the Lyceum anniversary prompts the speaker to recall friends and imagine their different lives. A personal remembrance becomes a reflection on how friendship endures separation.']
+      ]
+    },
+    sources: [{ru:'Культура.РФ — Александр Пушкин',en:'Culture.ru — Alexander Pushkin',url:'https://www.culture.ru/persons/8195/aleksandr-pushkin'}]
   },
   severyanin: {
     ru: {
@@ -443,7 +480,8 @@ const additionalPoetProfiles = {
     },
     sources: [
       {ru:'Культура.РФ — Фёдор Тютчев',en:'Culture.ru — Fyodor Tyutchev',url:'https://www.culture.ru/persons/8283/fedor-tyutchev'},
-      {ru:'Культура.РФ / «Артефакт» — автограф «Silentium!»',en:'Culture.ru / Artefact — Silentium! manuscript',url:'https://ar.culture.ru/ru/subject/avtograf-stihotvoreniya-silentium'}
+      {ru:'Культура.РФ / «Артефакт» — автограф «Silentium!»',en:'Culture.ru / Artefact — Silentium! manuscript',url:'https://ar.culture.ru/ru/subject/avtograf-stihotvoreniya-silentium'},
+      {ru:'Фотопортрет Сергея Левицкого',en:'Photograph by Sergey Levitsky',url:'https://commons.wikimedia.org/wiki/File:Тютчев_1860—1861.jpg'}
     ]
   },
   lorca: {
