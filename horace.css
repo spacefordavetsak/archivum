@@ -8,3 +8,108 @@
 .derzhavin-feature img{max-height:570px;object-position:center 24%;filter:grayscale(100%) brightness(.8) contrast(1.06)}.derzhavin-feature blockquote p{font-size:clamp(23px,2.65vw,36px);line-height:1.5}@media(max-width:700px){.derzhavin-feature blockquote p{font-size:clamp(21px,4.9vw,30px)}.derzhavin-feature img{max-height:480px}}
 
 .note-body .horace-poem-speaker{font:italic 22px/1.5 var(--serif);color:var(--gold);margin:38px 0 14px}
+
+.poet-page .horace-feature:has(+ .poet-profile) {
+  margin-bottom: 30px;
+}
+
+.poet-profile {
+  margin: 0 0 clamp(38px, 6vw, 70px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.poet-profile > summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: clamp(12px, 2vw, 25px);
+  padding: clamp(19px, 3vw, 32px);
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.poet-profile > summary::-webkit-details-marker { display: none; }
+.poet-profile > summary:hover { background: color-mix(in srgb, var(--gold) 7%, transparent); }
+.poet-profile > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
+.poet-profile-diamond { color: var(--gold); font-size: 10px; }
+.poet-profile-title { font: 400 clamp(25px, 3.1vw, 42px)/1.1 var(--serif); }
+.poet-profile-dates { color: var(--muted); font: 11px/1.5 var(--mono); white-space: nowrap; }
+
+.poet-profile-chevron {
+  width: 9px;
+  height: 9px;
+  border: solid var(--gold);
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+}
+
+.poet-profile[open] .poet-profile-chevron { transform: rotate(225deg); }
+
+.poet-profile-body {
+  border-top: 1px solid var(--line);
+  padding: clamp(20px, 3.5vw, 42px);
+}
+
+.poet-profile[open] .poet-profile-body { animation: poet-profile-reveal 240ms ease-out both; }
+
+@keyframes poet-profile-reveal {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.poet-profile-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(26px, 5vw, 64px);
+}
+
+.poet-profile-columns h2 {
+  color: var(--gold);
+  font: 11px/1.6 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.poet-profile-columns p,
+.poet-profile-columns dl {
+  color: var(--ink);
+  font: 400 clamp(18px, 1.7vw, 21px)/1.6 var(--reading);
+  margin: 0;
+}
+
+.poet-profile-columns p + p,
+.poet-profile-columns dd + dt { margin-top: 15px; }
+.poet-profile-columns dt { font-weight: 600; }
+.poet-profile-columns dd { margin: 3px 0 0; }
+
+.poet-profile-sources {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 18px;
+  color: var(--muted);
+  font: 11px/1.65 var(--mono);
+}
+
+.poet-profile-sources h3 { font: inherit; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 9px; }
+.poet-profile-sources ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; }
+.poet-profile-sources a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 700px) {
+  .poet-profile-columns { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .poet-profile > summary { grid-template-columns: auto minmax(0, 1fr) auto; row-gap: 5px; }
+  .poet-profile-diamond { grid-row: 1 / span 2; }
+  .poet-profile-dates { grid-column: 2; }
+  .poet-profile-chevron { grid-column: 3; grid-row: 1 / span 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poet-profile[open] .poet-profile-body { animation: none; }
+  .poet-profile-chevron { transition: none; }
+}
