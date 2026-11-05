@@ -15,7 +15,7 @@ const poets=[
   {id:'kipling',ru:'Киплинг Редьярд',en:'Rudyard Kipling'},
   {id:'nekrasov',ru:'Некрасов Николай Алексеевич',en:'Nikolay Alekseyevich Nekrasov'},
   {id:'pasternak',ru:'Пастернак Борис Леонидович',en:'Boris Leonidovich Pasternak'},
-  {id:'severyanin',ru:'Северянин Константин Васильевич',en:'Konstantin Vasilyevich Severyanin'},
+  {id:'severyanin',ru:'Игорь Северянин',en:'Igor Severyanin'},
   {id:'tyutchev',ru:'Тютчев Фёдор Иванович',en:'Fyodor Ivanovich Tyutchev'},
   {id:'lorca',ru:'Федерико Гарсия Лорка',en:'Federico García Lorca'}
 ];
@@ -105,7 +105,7 @@ const poetProfiles = {
 };
 
 function renderPoetProfile(id){
-  const profile=poetProfiles[id];
+  const profile=poetProfiles[id] ?? additionalPoetProfiles[id];
   if(!profile)return '';
   const copy=profile[language];
   const labels=language==='ru'
