@@ -38,13 +38,21 @@
   }
 
   .poetry-page .collection-card.has-image:nth-child(5n) img {
-    inset: 0 0 auto;
-    margin-inline: auto;
+    position: relative;
+    inset: auto;
+    align-self: center;
+    flex: none;
+    order: 1;
+    margin: 12px 0 16px;
     max-width: 100%;
-    height: calc(100% - 54px);
+    height: 230px;
+    z-index: 0;
   }
 
-  .poetry-page .collection-card.has-image:nth-child(5n) h2 { max-width: 100%; }
+  .poetry-page .collection-card.has-image:nth-child(5n) h2 {
+    order: 2;
+    max-width: 100%;
+  }
 }
 
 .poet-page .horace-feature:has(+ .poet-profile) {
