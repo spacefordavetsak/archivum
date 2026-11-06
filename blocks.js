@@ -3,8 +3,16 @@ function archiveBlockLayout(index){
   const mobileHeight=role===0?403:role===2?319:reference.image?247:189;
   return `--group:${Math.floor(index/5)};--mobile-card-height:${mobileHeight}px`;
 }
+const internalCardHeights=[403,247,319,247];
+
+function internalBlockLayout(index){
+  const group=Math.floor(index/internalCardHeights.length);
+  const mobileHeight=internalCardHeights[index%internalCardHeights.length];
+  return `--group:${group};--mobile-card-height:${mobileHeight}px`;
+}
+
 function renderArchiveBlocks(items){
-  return `<div class="archive-grid mosaic-grid internal-grid">${items.map((item,index)=>`<a class="section-card collection-card${item.id==='roadmap'?' roadmap-cover-card':''}${item.image?' has-image':''}" ${item.note?noteLinkAttributes(item.note):`href="${item.href}"`} style="${archiveBlockLayout(index)}" aria-label="${escapeHTML(label(item))}">${item.image?`<img src="${escapeHTML(item.image)}" alt="" loading="lazy" decoding="async" style="object-position:${escapeHTML(item.imagePosition||'center')}">`:''}<div class="card-meta"><span>${String(index+1).padStart(2,'0')}</span><span>${escapeHTML(item.meta||'')}</span></div><h2>${escapeHTML(label(item))}</h2></a>`).join('')}</div>`;
+  return `<div class="archive-grid mosaic-grid internal-grid">${items.map((item,index)=>`<a class="section-card collection-card${item.id==='roadmap'?' roadmap-cover-card':''}${item.image?' has-image':''}" ${item.note?noteLinkAttributes(item.note):`href="${item.href}"`} style="${internalBlockLayout(index)}" aria-label="${escapeHTML(label(item))}">${item.image?`<img src="${escapeHTML(item.image)}" alt="" loading="lazy" decoding="async" style="object-position:${escapeHTML(item.imagePosition||'center')}">`:''}<div class="card-meta"><span>${String(index+1).padStart(2,'0')}</span><span>${escapeHTML(item.meta||'')}</span></div><h2>${escapeHTML(label(item))}</h2></a>`).join('')}</div>`;
 }
 function sectionNavigation(section){
   const index=sections.indexOf(section),previous=sections[(index+sections.length-1)%sections.length],next=sections[(index+1)%sections.length];
