@@ -1,6 +1,6 @@
 const poets=[
   {id:'horace',ru:'Квинт Гораций Флак',en:'Quintus Horatius Flaccus',image:'assets/horace-portrait.png',imagePosition:'center 30%'},
-  {id:'akhmatova',ru:'Ахматова Анна Андреевна',en:'Anna Andreyevna Akhmatova'},
+  {id:'akhmatova',ru:'Ахматова Анна Андреевна',en:'Anna Andreyevna Akhmatova',image:'assets/akhmatova-portrait.jpeg',imagePosition:'center 36%'},
   {id:'balmont',ru:'Бальмонт Константин Дмитриевич',en:'Konstantin Dmitriyevich Balmont'},
   {id:'batyushkov',ru:'Батюшков Константин Николаевич',en:'Konstantin Nikolayevich Batyushkov',image:'assets/batyushkov-portrait.jpg',imagePosition:'center 25%'},
   {id:'boratynsky',ru:'Боратынский Евгений Абрамович',en:'Yevgeny Abramovich Boratynsky',image:'assets/boratynsky-portrait.jpg',imagePosition:'center 38%'},
