@@ -6,7 +6,7 @@ const religionCollections=[
   {id:'buddhism',section:'religion',ru:'Буддизм',en:'Buddhism',image:'assets/taoism-cover.jpeg',imagePosition:'center 20%',ruDesc:'Тексты, конспекты и заметки по буддизму.',enDesc:'Texts, reading notes, and reflections on Buddhism.'},
   {id:'confucianism',section:'religion',ru:'Конфуцианство',en:'Confucianism',image:'assets/confucianism-cover.jpeg',imagePosition:'center 40%',ruDesc:'Тексты, конспекты и заметки по конфуцианству.',enDesc:'Texts, reading notes, and reflections on Confucianism.'},
   {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',image:'assets/taoism-ink-cover.jpeg',imagePosition:'center 5%',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
-  {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
+  {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',image:'assets/shinto-cover.jpeg',imagePosition:'48% 49%',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
 ];
 const literatureCollections=[
   {id:'literature-antiquity',section:'literature',ru:'Античность',en:'Classical Antiquity',ruDesc:'Произведения и авторы Древней Греции и Рима.',enDesc:'Works and authors of ancient Greece and Rome.'},

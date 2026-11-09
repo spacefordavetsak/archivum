@@ -73,6 +73,8 @@
 .internal-grid .collection-card[href="#/collection/buddhism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.18),rgba(5,5,4,.03) 36%,rgba(5,5,4,.58))}
 .internal-grid .collection-card[href="#/collection/taoism"] img{filter:grayscale(.55) sepia(.12) brightness(.87)}
 .internal-grid .collection-card[href="#/collection/taoism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.55),rgba(5,5,4,.46) 16%,rgba(5,5,4,.14) 42%,rgba(5,5,4,.8))}
+.internal-grid .collection-card[href="#/collection/shinto"] img{filter:grayscale(.65) sepia(.1) brightness(.96)}
+.internal-grid .collection-card[href="#/collection/shinto"]::before{background:linear-gradient(180deg,rgba(5,5,4,.27),rgba(5,5,4,.04) 35%,rgba(5,5,4,.12) 64%,rgba(5,5,4,.76))}
 .internal-grid .collection-card[href="#/collection/christianity"]::before,
 .internal-grid .collection-card[href="#/collection/islam"]::before{background:linear-gradient(180deg,rgba(5,5,4,.15),rgba(5,5,4,.05) 36%,rgba(5,5,4,.2) 65%,rgba(5,5,4,.85))}
 .internal-grid .collection-card[href="#/collection/christianity"] h2,
