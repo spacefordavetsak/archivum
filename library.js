@@ -4,7 +4,7 @@ const religionCollections=[
   {id:'islam',section:'religion',ru:'Ислам',en:'Islam',image:'assets/islam-cover.jpeg',imagePosition:'center 17%',ruDesc:'Тексты, конспекты и заметки по исламу.',enDesc:'Texts, reading notes, and reflections on Islam.'},
   {id:'judaism',section:'religion',ru:'Иудаизм',en:'Judaism',image:'assets/judaism-cover.jpeg',imagePosition:'center 40%',ruDesc:'Тексты, конспекты и заметки по иудаизму.',enDesc:'Texts, reading notes, and reflections on Judaism.'},
   {id:'buddhism',section:'religion',ru:'Буддизм',en:'Buddhism',ruDesc:'Тексты, конспекты и заметки по буддизму.',enDesc:'Texts, reading notes, and reflections on Buddhism.'},
-  {id:'confucianism',section:'religion',ru:'Конфуцианство',en:'Confucianism',ruDesc:'Тексты, конспекты и заметки по конфуцианству.',enDesc:'Texts, reading notes, and reflections on Confucianism.'},
+  {id:'confucianism',section:'religion',ru:'Конфуцианство',en:'Confucianism',image:'assets/confucianism-cover.jpeg',imagePosition:'center 40%',ruDesc:'Тексты, конспекты и заметки по конфуцианству.',enDesc:'Texts, reading notes, and reflections on Confucianism.'},
   {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',image:'assets/taoism-cover.jpeg',imagePosition:'center 20%',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
   {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
 ];
