@@ -69,8 +69,10 @@
 .internal-grid .collection-card[href="#/collection/islam"] img{filter:grayscale(.38) sepia(.08) saturate(.9) brightness(.98)}
 .internal-grid .collection-card[href="#/collection/confucianism"] img{filter:grayscale(.75) sepia(.12) saturate(.75) brightness(.9)}
 .internal-grid .collection-card[href="#/collection/confucianism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.3),rgba(5,5,4,.06) 40%,rgba(5,5,4,.22) 65%,rgba(5,5,4,.84))}
-.internal-grid .collection-card[href="#/collection/taoism"] img{filter:grayscale(.65) sepia(.09) brightness(1.17)}
-.internal-grid .collection-card[href="#/collection/taoism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.18),rgba(5,5,4,.03) 36%,rgba(5,5,4,.58))}
+.internal-grid .collection-card[href="#/collection/buddhism"] img{filter:grayscale(.65) sepia(.09) brightness(1.17)}
+.internal-grid .collection-card[href="#/collection/buddhism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.18),rgba(5,5,4,.03) 36%,rgba(5,5,4,.58))}
+.internal-grid .collection-card[href="#/collection/taoism"] img{filter:grayscale(.55) sepia(.12) brightness(.87)}
+.internal-grid .collection-card[href="#/collection/taoism"]::before{background:linear-gradient(180deg,rgba(5,5,4,.55),rgba(5,5,4,.46) 16%,rgba(5,5,4,.14) 42%,rgba(5,5,4,.8))}
 .internal-grid .collection-card[href="#/collection/christianity"]::before,
 .internal-grid .collection-card[href="#/collection/islam"]::before{background:linear-gradient(180deg,rgba(5,5,4,.15),rgba(5,5,4,.05) 36%,rgba(5,5,4,.2) 65%,rgba(5,5,4,.85))}
 .internal-grid .collection-card[href="#/collection/christianity"] h2,
