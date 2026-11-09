@@ -5,7 +5,7 @@ const religionCollections=[
   {id:'judaism',section:'religion',ru:'Иудаизм',en:'Judaism',image:'assets/judaism-cover.jpeg',imagePosition:'center 40%',ruDesc:'Тексты, конспекты и заметки по иудаизму.',enDesc:'Texts, reading notes, and reflections on Judaism.'},
   {id:'buddhism',section:'religion',ru:'Буддизм',en:'Buddhism',ruDesc:'Тексты, конспекты и заметки по буддизму.',enDesc:'Texts, reading notes, and reflections on Buddhism.'},
   {id:'confucianism',section:'religion',ru:'Конфуцианство',en:'Confucianism',ruDesc:'Тексты, конспекты и заметки по конфуцианству.',enDesc:'Texts, reading notes, and reflections on Confucianism.'},
-  {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
+  {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',image:'assets/taoism-cover.jpeg',imagePosition:'center 20%',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
   {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
 ];
 const literatureCollections=[
