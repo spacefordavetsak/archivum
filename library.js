@@ -2,7 +2,7 @@ const philosophyCollections=[{id:'roadmap',noteId:'platonism-roadmap',ru:'Дор
 const religionCollections=[
   {id:'christianity',section:'religion',ru:'Христианство',en:'Christianity',image:'assets/christianity-cover.jpeg',imagePosition:'center 28%',ruDesc:'Тексты, конспекты и заметки по христианству.',enDesc:'Texts, reading notes, and reflections on Christianity.'},
   {id:'islam',section:'religion',ru:'Ислам',en:'Islam',image:'assets/islam-cover.jpeg',imagePosition:'center 17%',ruDesc:'Тексты, конспекты и заметки по исламу.',enDesc:'Texts, reading notes, and reflections on Islam.'},
-  {id:'judaism',section:'religion',ru:'Иудаизм',en:'Judaism',ruDesc:'Тексты, конспекты и заметки по иудаизму.',enDesc:'Texts, reading notes, and reflections on Judaism.'},
+  {id:'judaism',section:'religion',ru:'Иудаизм',en:'Judaism',image:'assets/judaism-cover.jpeg',imagePosition:'center 40%',ruDesc:'Тексты, конспекты и заметки по иудаизму.',enDesc:'Texts, reading notes, and reflections on Judaism.'},
   {id:'buddhism',section:'religion',ru:'Буддизм',en:'Buddhism',ruDesc:'Тексты, конспекты и заметки по буддизму.',enDesc:'Texts, reading notes, and reflections on Buddhism.'},
   {id:'confucianism',section:'religion',ru:'Конфуцианство',en:'Confucianism',ruDesc:'Тексты, конспекты и заметки по конфуцианству.',enDesc:'Texts, reading notes, and reflections on Confucianism.'},
   {id:'taoism',section:'religion',ru:'Даосизм',en:'Taoism',ruDesc:'Тексты, конспекты и заметки по даосизму.',enDesc:'Texts, reading notes, and reflections on Taoism.'},
