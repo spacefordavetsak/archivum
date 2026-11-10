@@ -53,13 +53,15 @@
 .internal-grid .collection-card[href="#/poet/gamzatov"] img,
 .internal-grid .collection-card[href="#/poet/bunin"] img,
 .internal-grid .collection-card[href="#/poet/gaft"] img,
-.internal-grid .collection-card[href="#/poet/yevtushenko"] img{filter:grayscale(1) sepia(.1) brightness(.93)}
+.internal-grid .collection-card[href="#/poet/yevtushenko"] img,
+.internal-grid .collection-card[href="#/poet/yesenin"] img{filter:grayscale(1) sepia(.1) brightness(.93)}
 .internal-grid .collection-card[href="#/poet/balmont"]::before,
 .internal-grid .collection-card[href="#/poet/bryusov"]::before,
 .internal-grid .collection-card[href="#/poet/gamzatov"]::before,
 .internal-grid .collection-card[href="#/poet/bunin"]::before,
 .internal-grid .collection-card[href="#/poet/gaft"]::before,
-.internal-grid .collection-card[href="#/poet/yevtushenko"]::before{background:linear-gradient(180deg,rgba(5,5,4,.3),rgba(5,5,4,.05) 38%,rgba(5,5,4,.18) 60%,rgba(5,5,4,.86))}
+.internal-grid .collection-card[href="#/poet/yevtushenko"]::before,
+.internal-grid .collection-card[href="#/poet/yesenin"]::before{background:linear-gradient(180deg,rgba(5,5,4,.3),rgba(5,5,4,.05) 38%,rgba(5,5,4,.18) 60%,rgba(5,5,4,.86))}
 .internal-grid .collection-card.roadmap-cover-card img{filter:grayscale(.65) sepia(.18) saturate(.7) brightness(.94)}
 .internal-grid .collection-card.roadmap-cover-card::before{background:linear-gradient(180deg,rgba(5,5,4,.36),rgba(5,5,4,.08) 38%,rgba(5,5,4,.22) 64%,rgba(5,5,4,.84))}
 .internal-grid .collection-card.roadmap-cover-card h2{text-shadow:0 2px 18px #0008}

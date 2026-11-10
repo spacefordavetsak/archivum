@@ -10,7 +10,7 @@ const poets=[
   {id:'gaft',ru:'Гафт Валентин Иосифович',en:'Valentin Iosifovich Gaft',image:'assets/gaft-portrait.jpeg',imagePosition:'center top'},
   {id:'derzhavin',ru:'Державин Гавриил Романович',en:'Gavriil Romanovich Derzhavin',image:'assets/derzhavin-portrait.jpg',imagePosition:'center 30%'},
   {id:'yevtushenko',ru:'Евтушенко Евгений Александрович',en:'Yevgeny Aleksandrovich Yevtushenko',image:'assets/yevtushenko-portrait.jpeg',imagePosition:'38% center'},
-  {id:'yesenin',ru:'Есенин Сергей Александрович',en:'Sergey Aleksandrovich Yesenin'},
+  {id:'yesenin',ru:'Есенин Сергей Александрович',en:'Sergey Aleksandrovich Yesenin',image:'assets/yesenin-portrait.jpeg',imagePosition:'center 32%'},
   {id:'zhukovsky',ru:'Жуковский Василий Андреевич',en:'Vasily Andreyevich Zhukovsky',image:'assets/zhukovsky-portrait.jpg',imagePosition:'center 22%'},
   {id:'kipling',ru:'Киплинг Редьярд',en:'Rudyard Kipling'},
   {id:'nekrasov',ru:'Некрасов Николай Алексеевич',en:'Nikolay Alekseyevich Nekrasov',image:'assets/nekrasov-portrait.jpg',imagePosition:'center 29%'},
