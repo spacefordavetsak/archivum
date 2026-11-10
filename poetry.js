@@ -18,7 +18,7 @@ const poets=[
   {id:'pushkin',ru:'Пушкин Александр Сергеевич',en:'Alexander Sergeyevich Pushkin',image:'assets/pushkin-portrait.jpeg',imagePosition:'center 20%'},
   {id:'severyanin',ru:'Игорь Северянин',en:'Igor Severyanin',image:'assets/severyanin-portrait.jpeg',imagePosition:'center 13%'},
   {id:'tyutchev',ru:'Тютчев Фёдор Иванович',en:'Fyodor Ivanovich Tyutchev',image:'assets/tyutchev-portrait.jpg',imagePosition:'center 22%'},
-  {id:'lorca',ru:'Федерико Гарсия Лорка',en:'Federico García Lorca'}
+  {id:'lorca',ru:'Федерико Гарсия Лорка',en:'Federico García Lorca',image:'assets/lorca-cover.jpeg',imagePosition:'60% center'}
 ];
 const poetryCopy={
   ru:{poets:'Поэты',poetShort:'ПОЭТОВ',all:'Все поэты',collection:'Стихотворения и заметки',empty:'Здесь появятся стихотворения, конспекты и заметки этого автора.',previous:'Предыдущий поэт',next:'Следующий поэт'},
