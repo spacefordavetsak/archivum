@@ -6,7 +6,7 @@ const poets=[
   {id:'boratynsky',ru:'Боратынский Евгений Абрамович',en:'Yevgeny Abramovich Boratynsky',image:'assets/boratynsky-portrait.jpg',imagePosition:'center 38%'},
   {id:'bryusov',ru:'Брюсов Валерий Яковлевич',en:'Valery Yakovlevich Bryusov',image:'assets/bryusov-portrait.jpeg',imagePosition:'center 34%'},
   {id:'bunin',ru:'Бунин Иван Алексеевич',en:'Ivan Alekseyevich Bunin',image:'assets/bunin-portrait.jpeg',imagePosition:'center 18%'},
-  {id:'gamzatov',ru:'Гамзатов Расул Гамзатович',en:'Rasul Gamzatovich Gamzatov'},
+  {id:'gamzatov',ru:'Гамзатов Расул Гамзатович',en:'Rasul Gamzatovich Gamzatov',image:'assets/gamzatov-portrait.jpeg',imagePosition:'center 41%'},
   {id:'gaft',ru:'Гафт Валентин Иосифович',en:'Valentin Iosifovich Gaft'},
   {id:'derzhavin',ru:'Державин Гавриил Романович',en:'Gavriil Romanovich Derzhavin',image:'assets/derzhavin-portrait.jpg',imagePosition:'center 30%'},
   {id:'yevtushenko',ru:'Евтушенко Евгений Александрович',en:'Yevgeny Aleksandrovich Yevtushenko'},
