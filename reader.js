@@ -57,14 +57,18 @@ async function notePage(id){
     const data=await getNoteContent(id);
     if(renderNumber!==readerRenderNumber||readerRoute().type!=='note'||readerRoute().id!==id)return;
     const parts=data.toc.filter(entry=>entry.level===2).length;
-    document.getElementById('reader-meta').innerHTML=`<span>${id==='horace-to-melpomene'?(language==='ru'?'Русский и латинский':'Russian and Latin'):readerText('originalLanguage')}</span><span>${Math.ceil(data.words/200)} ${readerText('minutes')}</span><span>${readerPartCount(parts)}</span>`;
-    document.getElementById('reader-content').innerHTML=`<div class="reader-layout"><aside class="reader-sidebar"><details class="reader-contents"${matchMedia('(min-width: 901px)').matches?' open':''}><summary>${readerText('contents')}<span aria-hidden="true">＋</span></summary><div class="reader-contents-inner"><input type="search" id="reader-toc-search" placeholder="${readerText('findChapter')}" aria-label="${readerText('chapterSearch')}" autocomplete="off"><nav aria-label="${readerText('contents')}"><ul id="reader-toc-links"></ul></nav></div></details><a class="reader-top-link" href="#/note/${id}">${readerText('start')} ↑</a></aside><article id="reader-body" class="note-body" lang="ru" aria-label="${escapeHTML(note.ru)}">${data.html}</article></div>`;
-    drawContents(note,data);
+    const showContents=note.section!=='poetry'||parts>1;
+    document.getElementById('reader-meta').innerHTML=`<span>${id==='horace-to-melpomene'?(language==='ru'?'Русский и латинский':'Russian and Latin'):readerText('originalLanguage')}</span><span>${Math.ceil(data.words/200)} ${readerText('minutes')}</span>${showContents?`<span>${readerPartCount(parts)}</span>`:''}`;
+    const sidebar=showContents?`<aside class="reader-sidebar"><details class="reader-contents"${matchMedia('(min-width: 901px)').matches?' open':''}><summary>${readerText('contents')}<span aria-hidden="true">＋</span></summary><div class="reader-contents-inner"><input type="search" id="reader-toc-search" placeholder="${readerText('findChapter')}" aria-label="${readerText('chapterSearch')}" autocomplete="off"><nav aria-label="${readerText('contents')}"><ul id="reader-toc-links"></ul></nav></div></details><a class="reader-top-link" href="#/note/${id}">${readerText('start')} ↑</a></aside>`:'';
+    document.getElementById('reader-content').innerHTML=`<div class="reader-layout${showContents?'':' reader-layout--single'}">${sidebar}<article id="reader-body" class="note-body" lang="ru" aria-label="${escapeHTML(note.ru)}">${data.html}</article></div>`;
     if(note.id!=='painting-favourites')enhanceNoteVisuals(document.getElementById('reader-body'));
     installRoadmapSearch(document.getElementById('reader-body'));
     installArtGallery(document.getElementById('reader-body'),note,data);
-    installReaderMobileTools(note,data);
-    document.getElementById('reader-toc-search').addEventListener('input',event=>drawContents(note,data,event.target.value));
+    if(showContents){
+      drawContents(note,data);
+      document.getElementById('reader-toc-search').addEventListener('input',event=>drawContents(note,data,event.target.value));
+    }
+    installReaderMobileTools(note,data,showContents);
     scrollReaderAnchor();
   }catch{
     if(renderNumber!==readerRenderNumber||readerRoute().id!==id)return;
@@ -74,11 +78,11 @@ async function notePage(id){
 }
 
 let mobileContentsDialog=null;
-function installReaderMobileTools(note,data){
-  const tools=document.createElement('nav');tools.className='reader-mobile-tools';tools.setAttribute('aria-label',readerText('contents'));
-  tools.innerHTML=`<button type="button" data-reader-contents><span aria-hidden="true">☷</span>${readerText('contents')}</button><button type="button" data-reader-top>${language==='ru'?'Наверх':'Top'}<span aria-hidden="true">↑</span></button>`;
+function installReaderMobileTools(note,data,showContents){
+  const tools=document.createElement('nav');tools.className='reader-mobile-tools';tools.setAttribute('aria-label',readerText(showContents?'contents':'start'));
+  tools.innerHTML=`${showContents?`<button type="button" data-reader-contents><span aria-hidden="true">☷</span>${readerText('contents')}</button>`:''}<button type="button" data-reader-top>${language==='ru'?'Наверх':'Top'}<span aria-hidden="true">↑</span></button>`;
   main.querySelector('.reader-page').append(tools);
-  tools.querySelector('[data-reader-contents]').addEventListener('click',()=>openMobileContents(note,data));
+  tools.querySelector('[data-reader-contents]')?.addEventListener('click',()=>openMobileContents(note,data));
   tools.querySelector('[data-reader-top]').addEventListener('click',()=>{if(readerRoute().anchor)location.hash=`#/note/${note.id}`;window.scrollTo({top:0,behavior:'instant'})});
 }
 function openMobileContents(note,data){
