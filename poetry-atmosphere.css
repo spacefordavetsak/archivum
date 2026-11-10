@@ -1,0 +1,113 @@
+.poet-page--atmospheric,
+.reader-page--atmospheric {
+  position: relative;
+  isolation: isolate;
+}
+
+.poet-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: #0b0907;
+}
+
+.poet-atmosphere img,
+.poet-atmosphere video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 38% center;
+  filter: grayscale(.55) sepia(.72) saturate(1.2) brightness(.92);
+}
+
+.poet-atmosphere video {
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+
+.poet-atmosphere[data-video-ready] video { opacity: 1; }
+
+.poet-atmosphere::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #08070480, transparent 31%, #08070488),
+    linear-gradient(110deg, #0c0905a0, #160e0330 53%, #09080694);
+}
+
+.poet-atmosphere-toggle {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid #bda26b66;
+  color: #e4d4b5;
+  background: #16110cd9;
+  font: 9px/1.4 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.poet-atmosphere-toggle:hover { border-color: #dec48e; }
+
+.poet-page--atmospheric .section-card {
+  border-color: #c2a57580;
+  color: #f3ead8;
+  background:
+    linear-gradient(142deg, #f7dba02b, transparent 42%),
+    linear-gradient(180deg, #16110d5c, #14100c48 38%, #0a0806e0 100%);
+  box-shadow: inset 0 1px 0 #ffe3ae38, inset 0 -1px 0 #0009, 0 5px 22px #0004;
+  backdrop-filter: blur(9px) saturate(1.12);
+  -webkit-backdrop-filter: blur(9px) saturate(1.12);
+}
+
+.poet-page--atmospheric .section-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #fbe4b22b, transparent 50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.poet-page--atmospheric .section-card:hover,
+.poet-page--atmospheric .section-card:focus-visible { border-color: #ddbf86; }
+
+.poet-page--atmospheric .section-card:hover::before,
+.poet-page--atmospheric .section-card:focus-visible::before { opacity: 1; }
+
+.poet-page--atmospheric .section-card .card-meta { color: #e2d2b3; }
+.poet-page--atmospheric .section-card h2 { text-shadow: 0 1px 10px #000b; }
+.poet-page--atmospheric .poet-profile { background: #0e0c0aeb; }
+
+.reader-page--atmospheric .poet-atmosphere {
+  position: absolute;
+  inset: 0 0 auto;
+  height: clamp(250px, 44vh, 430px);
+  opacity: .38;
+  mask-image: linear-gradient(to bottom, #000, #000a 42%, transparent 98%);
+}
+
+@media (max-width: 900px) {
+  .poet-atmosphere img { object-position: 27% center; }
+  .poet-page--atmospheric .section-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  .poet-atmosphere video,
+  .poet-atmosphere-toggle { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poet-page--atmospheric .section-card::before { transition: none; }
+}
