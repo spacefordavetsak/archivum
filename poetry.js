@@ -14,9 +14,9 @@ const poets=[
   {id:'zhukovsky',ru:'Жуковский Василий Андреевич',en:'Vasily Andreyevich Zhukovsky',image:'assets/zhukovsky-portrait.jpg',imagePosition:'center 22%'},
   {id:'kipling',ru:'Киплинг Редьярд',en:'Rudyard Kipling',image:'assets/kipling-portrait.jpeg',imagePosition:'center 20%'},
   {id:'nekrasov',ru:'Некрасов Николай Алексеевич',en:'Nikolay Alekseyevich Nekrasov',image:'assets/nekrasov-portrait.jpg',imagePosition:'center 29%'},
-  {id:'pasternak',ru:'Пастернак Борис Леонидович',en:'Boris Leonidovich Pasternak'},
+  {id:'pasternak',ru:'Пастернак Борис Леонидович',en:'Boris Leonidovich Pasternak',image:'assets/pasternak-portrait.jpeg',imagePosition:'center 23%'},
   {id:'pushkin',ru:'Пушкин Александр Сергеевич',en:'Alexander Sergeyevich Pushkin'},
-  {id:'severyanin',ru:'Игорь Северянин',en:'Igor Severyanin'},
+  {id:'severyanin',ru:'Игорь Северянин',en:'Igor Severyanin',image:'assets/severyanin-portrait.jpeg',imagePosition:'center 13%'},
   {id:'tyutchev',ru:'Тютчев Фёдор Иванович',en:'Fyodor Ivanovich Tyutchev',image:'assets/tyutchev-portrait.jpg',imagePosition:'center 22%'},
   {id:'lorca',ru:'Федерико Гарсия Лорка',en:'Federico García Lorca'}
 ];
