@@ -1,11 +1,11 @@
 const poets=[
   {id:'horace',ru:'Квинт Гораций Флак',en:'Quintus Horatius Flaccus',image:'assets/horace-portrait.png',imagePosition:'center 30%'},
   {id:'akhmatova',ru:'Ахматова Анна Андреевна',en:'Anna Andreyevna Akhmatova',image:'assets/akhmatova-portrait.jpeg',imagePosition:'center 36%'},
-  {id:'balmont',ru:'Бальмонт Константин Дмитриевич',en:'Konstantin Dmitriyevich Balmont'},
+  {id:'balmont',ru:'Бальмонт Константин Дмитриевич',en:'Konstantin Dmitriyevich Balmont',image:'assets/balmont-portrait.jpeg',imagePosition:'center 17%'},
   {id:'batyushkov',ru:'Батюшков Константин Николаевич',en:'Konstantin Nikolayevich Batyushkov',image:'assets/batyushkov-portrait.jpg',imagePosition:'center 25%'},
   {id:'boratynsky',ru:'Боратынский Евгений Абрамович',en:'Yevgeny Abramovich Boratynsky',image:'assets/boratynsky-portrait.jpg',imagePosition:'center 38%'},
   {id:'bryusov',ru:'Брюсов Валерий Яковлевич',en:'Valery Yakovlevich Bryusov',image:'assets/bryusov-portrait.jpeg',imagePosition:'center 34%'},
-  {id:'bunin',ru:'Бунин Иван Алексеевич',en:'Ivan Alekseyevich Bunin'},
+  {id:'bunin',ru:'Бунин Иван Алексеевич',en:'Ivan Alekseyevich Bunin',image:'assets/bunin-portrait.jpeg',imagePosition:'center 18%'},
   {id:'gamzatov',ru:'Гамзатов Расул Гамзатович',en:'Rasul Gamzatovich Gamzatov'},
   {id:'gaft',ru:'Гафт Валентин Иосифович',en:'Valentin Iosifovich Gaft'},
   {id:'derzhavin',ru:'Державин Гавриил Романович',en:'Gavriil Romanovich Derzhavin',image:'assets/derzhavin-portrait.jpg',imagePosition:'center 30%'},
