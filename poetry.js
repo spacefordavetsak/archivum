@@ -159,6 +159,8 @@ poetMotionQuery.addEventListener('change',syncPoetBackground);
 function mountPoetBackground(){
   const video=main.querySelector('.poet-atmosphere video');
   const toggle=main.querySelector('.poet-atmosphere-toggle');
+  video.defaultPlaybackRate=1.5;
+  video.playbackRate=1.5;
   const updateLabel=()=>{
     toggle.textContent=language==='ru'
       ? (video.paused?'Оживить фон':'Остановить фон')
@@ -183,6 +185,21 @@ function poetPage(id){
   const previous=poets[(index+poets.length-1)%poets.length],next=poets[(index+1)%poets.length];
   const atmospheric=id==='balmont';
   main.innerHTML=`<section class="subpage poet-page${atmospheric?' poet-page--atmospheric':''}">${atmospheric?`${renderPoetAtmosphere(true)}<button type="button" class="poet-atmosphere-toggle"></button>`:''}<a class="back-link" href="#/section/poetry"><span aria-hidden="true">←</span>${label(section)}</a><div class="eyebrow">${poetryText('poets')} — ${String(index+1).padStart(2,'0')} / ${poets.length} · ${poetCount(id)} ${text('materialShort')}</div><h1>${label(author)}</h1><p class="section-description">${poetryText('collection')}</p>${id==='horace'?`<div class="horace-feature"><figure><img src="assets/horace-portrait.png" alt="Художественное изображение бюста Горация" loading="eager"><figcaption>${language==='ru'?'Художественная интерпретация':'Artistic interpretation'}</figcaption></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p>Какая польза в напрасных законах там, где нет нравов? Что значат пустые законы без обычаев?</p><cite>Квинт Гораций Флак</cite></blockquote></div>`:''}${id==='derzhavin'?`<div class="horace-feature derzhavin-feature"><figure><img src="assets/derzhavin-portrait.jpg" alt="Портрет Гавриила Романовича Державина" loading="eager"></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p lang="ru">Жизнь есть небес мгновенный дар;<br>Устрой ее себе к покою<br>И с чистою твоей душою<br>Благословляй судеб удар.</p><cite>Гавриил Романович Державин</cite></blockquote></div>`:''}
+    ${id==='balmont'?`
+      <div class="horace-feature">
+        <figure>
+          <img src="${escapeHTML(author.image)}" alt="${language==='ru'?'Портрет Константина Бальмонта':'Portrait of Konstantin Balmont'}" loading="eager">
+        </figure>
+        <blockquote lang="ru">
+          <span class="horace-ornament" aria-hidden="true">◆</span>
+          <p>И да, и нет — здесь все мое,<br>
+             Приемлю боль — как благостыню,<br>
+             Благославляю бытие,<br>
+             И если создал я пустыню,<br>
+             Ее величие — мое!</p>
+          <cite>Константин Бальмонт</cite>
+        </blockquote>
+      </div>`:''}
     ${renderPoetProfile(id)}
     ${id==='derzhavin'?`${renderArchiveBlocks(derzhavinWorks.map(work=>({...work,href:`#/note/derzhavin-${work.id}`,meta:`1 ${text('materialShort')}`})))}`:items.length?materialList(items):`<div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${poetryText('empty')}</p><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></div>`}<nav class="section-navigation" aria-label="${poetryText('poets')}"><a href="#/poet/${previous.id}"><span class="nav-caption">${poetryText('previous')}</span>← ${label(previous)}</a><a href="#/poet/${next.id}"><span class="nav-caption">${poetryText('next')}</span>${label(next)} →</a></nav></section>`;
   if(atmospheric)mountPoetBackground();
