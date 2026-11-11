@@ -138,19 +138,19 @@ function renderPoetProfile(id){
   </details>`;
 }
 
-// Background footage: Engin Akyurt, Pexels, video 11945569.
+// Background footage: Dan Cristian Pădureț, Pexels, video 3051492.
 const poetMotionQuery=matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
 let poetBackgroundPaused=false;
 
 function renderPoetAtmosphere(animated=false){
-  return `<div class="poet-atmosphere" aria-hidden="true"><img src="assets/poetry-ink.jpg" alt="" decoding="async">${animated?'<video muted loop playsinline preload="none" tabindex="-1"></video>':''}</div>`;
+  return `<div class="poet-atmosphere" aria-hidden="true"><img src="assets/poetry-ink-monochrome.jpg" alt="" decoding="async">${animated?'<video muted loop playsinline preload="none" tabindex="-1"></video>':''}</div>`;
 }
 
 function syncPoetBackground(){
   const video=main.querySelector('.poet-atmosphere video');
   if(!video)return;
   if(!poetMotionQuery.matches||poetBackgroundPaused){video.pause();return}
-  if(!video.hasAttribute('src'))video.src='assets/poetry-ink.mp4';
+  if(!video.hasAttribute('src'))video.src='assets/poetry-ink-monochrome.mp4';
   video.play().catch(()=>{});
 }
 
