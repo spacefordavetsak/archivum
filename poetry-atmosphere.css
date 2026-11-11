@@ -95,6 +95,26 @@
 
 .poet-page--atmospheric .poet-profile[open] { background-color: #100e0ce8; }
 
+.poet-portrait-feature {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.poet-portrait-feature figure {
+  width: fit-content;
+  max-width: min(100%, 460px);
+  text-align: center;
+}
+
+.poet-portrait-feature img {
+  width: auto;
+  max-width: 100%;
+  max-height: min(540px, 65vh);
+  object-fit: contain;
+}
+
+.poet-portrait-feature figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+
 .reader-page--atmospheric .poet-atmosphere {
   position: absolute;
   inset: 0 0 auto;

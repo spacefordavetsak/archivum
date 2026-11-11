@@ -203,6 +203,13 @@ function poetPage(id){
           <cite>Константин Бальмонт</cite>
         </blockquote>
       </div>`:''}
+    ${!['horace','derzhavin','balmont'].includes(id)?`
+      <div class="horace-feature poet-portrait-feature">
+        <figure>
+          <img src="${escapeHTML(id==='lorca'?'assets/lorca-portrait-1933.jpg':author.image)}" alt="${escapeHTML(label(author))}" loading="eager">
+          ${id==='lorca'?`<figcaption><a href="https://commons.wikimedia.org/wiki/File:Federico_Garc%C3%ADa_Lorca,_dedicada_a_Xavier_B%C3%B3veda,_1933.jpg">${language==='ru'?'Буэнос-Айрес, 1933':'Buenos Aires, 1933'}</a></figcaption>`:''}
+        </figure>
+      </div>`:''}
     ${renderPoetProfile(id)}
     ${id==='derzhavin'?`${renderArchiveBlocks(derzhavinWorks.map(work=>({...work,href:`#/note/derzhavin-${work.id}`,meta:`1 ${text('materialShort')}`})))}`:items.length?materialList(items):`<div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${poetryText('empty')}</p><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></div>`}<nav class="section-navigation" aria-label="${poetryText('poets')}"><a href="#/poet/${previous.id}"><span class="nav-caption">${poetryText('previous')}</span>← ${label(previous)}</a><a href="#/poet/${next.id}"><span class="nav-caption">${poetryText('next')}</span>${label(next)} →</a></nav></section>`;
   mountPoetBackground();
