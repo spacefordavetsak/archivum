@@ -139,26 +139,28 @@ function renderPoetProfile(id){
 }
 
 // Background footage: Dan Cristian Pădureț, Pexels, video 3051492.
-const poetMotionQuery=matchMedia('(prefers-reduced-motion: no-preference)');
-let poetBackgroundPaused=false;
+const inkMotionQuery=matchMedia('(prefers-reduced-motion: no-preference)');
+let inkBackgroundPaused=false;
 
-function renderPoetAtmosphere(animated=false){
-  return `<div class="poet-atmosphere" aria-hidden="true"><img src="assets/poetry-ink-monochrome.jpg" alt="" decoding="async">${animated?'<video muted loop playsinline preload="none" tabindex="-1"></video>':''}</div>`;
+function renderInkBackground(animated=false){
+  const video=animated?'<video muted loop playsinline preload="none" tabindex="-1"></video>':'';
+  const toggle=animated?'<button type="button" class="ink-background-toggle"></button>':'';
+  return `<div class="ink-background" aria-hidden="true"><img src="assets/poetry-ink-monochrome.jpg" alt="" decoding="async">${video}</div>${toggle}`;
 }
 
-function syncPoetBackground(){
-  const video=main.querySelector('.poet-atmosphere video');
+function syncInkBackground(){
+  const video=main.querySelector('.ink-background video');
   if(!video)return;
-  if(!poetMotionQuery.matches||poetBackgroundPaused){video.pause();return}
+  if(!inkMotionQuery.matches||inkBackgroundPaused){video.pause();return}
   if(!video.hasAttribute('src'))video.src='assets/poetry-ink-monochrome.mp4';
   video.play().catch(()=>{});
 }
 
-poetMotionQuery.addEventListener('change',syncPoetBackground);
+inkMotionQuery.addEventListener('change',syncInkBackground);
 
-function mountPoetBackground(){
-  const video=main.querySelector('.poet-atmosphere video');
-  const toggle=main.querySelector('.poet-atmosphere-toggle');
+function mountInkBackground(){
+  const video=main.querySelector('.ink-background video');
+  const toggle=main.querySelector('.ink-background-toggle');
   video.muted=true;
   video.defaultPlaybackRate=1.5;
   video.playbackRate=1.5;
@@ -172,11 +174,11 @@ function mountPoetBackground(){
   video.addEventListener('pause',updateLabel);
   video.addEventListener('error',()=>{toggle.hidden=true});
   toggle.addEventListener('click',()=>{
-    poetBackgroundPaused=!video.paused;
-    syncPoetBackground();
+    inkBackgroundPaused=!video.paused;
+    syncInkBackground();
   });
   updateLabel();
-  syncPoetBackground();
+  syncInkBackground();
 }
 
 function poetPage(id){
@@ -184,9 +186,8 @@ function poetPage(id){
   if(!author){main.innerHTML=`<section class="subpage"><h1>${text('notFound')}</h1><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></section>`;return}
   const index=poets.indexOf(author),items=poetNotes(id),section=sections.find(item=>item.id==='poetry');
   const previous=poets[(index+poets.length-1)%poets.length],next=poets[(index+1)%poets.length];
-  main.innerHTML=`<section class="subpage poet-page poet-page--atmospheric">
-    ${renderPoetAtmosphere(true)}
-    <button type="button" class="poet-atmosphere-toggle"></button>
+  main.innerHTML=`<section class="subpage poet-page ink-page">
+    ${renderInkBackground(true)}
     <a class="back-link" href="#/section/poetry"><span aria-hidden="true">←</span>${label(section)}</a><div class="eyebrow">${poetryText('poets')} — ${String(index+1).padStart(2,'0')} / ${poets.length} · ${poetCount(id)} ${text('materialShort')}</div><h1>${label(author)}</h1><p class="section-description">${poetryText('collection')}</p>${id==='horace'?`<div class="horace-feature"><figure><img src="assets/horace-portrait.png" alt="Художественное изображение бюста Горация" loading="eager"><figcaption>${language==='ru'?'Художественная интерпретация':'Artistic interpretation'}</figcaption></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p>Какая польза в напрасных законах там, где нет нравов? Что значат пустые законы без обычаев?</p><cite>Квинт Гораций Флак</cite></blockquote></div>`:''}${id==='derzhavin'?`<div class="horace-feature derzhavin-feature"><figure><img src="assets/derzhavin-portrait.jpg" alt="Портрет Гавриила Романовича Державина" loading="eager"></figure><blockquote><span class="horace-ornament" aria-hidden="true">◆</span><p lang="ru">Жизнь есть небес мгновенный дар;<br>Устрой ее себе к покою<br>И с чистою твоей душою<br>Благословляй судеб удар.</p><cite>Гавриил Романович Державин</cite></blockquote></div>`:''}
     ${id==='balmont'?`
       <div class="horace-feature">
@@ -212,7 +213,7 @@ function poetPage(id){
       </div>`:''}
     ${renderPoetProfile(id)}
     ${id==='derzhavin'?`${renderArchiveBlocks(derzhavinWorks.map(work=>({...work,href:`#/note/derzhavin-${work.id}`,meta:`1 ${text('materialShort')}`})))}`:items.length?materialList(items):`<div class="empty-section"><span class="diamond" aria-hidden="true">◆</span><h2>${philosophyText('emptyTitle')}</h2><p>${poetryText('empty')}</p><a class="underlined-link" href="#/section/poetry">${poetryText('all')}</a></div>`}<nav class="section-navigation" aria-label="${poetryText('poets')}"><a href="#/poet/${previous.id}"><span class="nav-caption">${poetryText('previous')}</span>← ${label(previous)}</a><a href="#/poet/${next.id}"><span class="nav-caption">${poetryText('next')}</span>${label(next)} →</a></nav></section>`;
-  mountPoetBackground();
+  mountInkBackground();
   document.title=`${label(author)} — ARCHIVUM`;
 }
 

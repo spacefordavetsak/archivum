@@ -1,10 +1,10 @@
-.poet-page--atmospheric,
+.ink-page,
 .reader-page--atmospheric {
   position: relative;
   isolation: isolate;
 }
 
-.poet-atmosphere {
+.ink-background {
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -13,8 +13,8 @@
   background: #0b0907;
 }
 
-.poet-atmosphere img,
-.poet-atmosphere video {
+.ink-background img,
+.ink-background video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -24,14 +24,14 @@
   filter: grayscale(1) brightness(.78);
 }
 
-.poet-atmosphere video {
+.ink-background video {
   opacity: 0;
   transition: opacity .9s ease;
 }
 
-.poet-atmosphere[data-video-ready] video { opacity: 1; }
+.ink-background[data-video-ready] video { opacity: 1; }
 
-.poet-atmosphere::after {
+.ink-background::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -40,7 +40,7 @@
     linear-gradient(105deg, #080704aa, #08070425 62%, #08070463);
 }
 
-.poet-atmosphere-toggle {
+.ink-background-toggle {
   position: absolute;
   top: 45px;
   right: 0;
@@ -54,9 +54,9 @@
   text-transform: uppercase;
 }
 
-.poet-atmosphere-toggle:hover { border-color: #dec48e; }
+.ink-background-toggle:hover { border-color: #dec48e; }
 
-.poet-page--atmospheric .section-card {
+.ink-page .section-card {
   border-color: #c2a57580;
   color: #f3ead8;
   background:
@@ -67,7 +67,7 @@
   -webkit-backdrop-filter: blur(9px) saturate(1.12);
 }
 
-.poet-page--atmospheric .section-card::before {
+.ink-page .section-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -77,15 +77,15 @@
   transition: opacity .25s ease;
 }
 
-.poet-page--atmospheric .section-card:hover,
-.poet-page--atmospheric .section-card:focus-visible { border-color: #ddbf86; }
+.ink-page .section-card:hover,
+.ink-page .section-card:focus-visible { border-color: #ddbf86; }
 
-.poet-page--atmospheric .section-card:hover::before,
-.poet-page--atmospheric .section-card:focus-visible::before { opacity: 1; }
+.ink-page .section-card:hover::before,
+.ink-page .section-card:focus-visible::before { opacity: 1; }
 
-.poet-page--atmospheric .section-card .card-meta { color: #e2d2b3; }
-.poet-page--atmospheric .section-card h2 { text-shadow: 0 1px 10px #000b; }
-.poet-page--atmospheric .poet-profile {
+.ink-page .section-card .card-meta { color: #e2d2b3; }
+.ink-page .section-card h2 { text-shadow: 0 1px 10px #000b; }
+.ink-page .poet-profile {
   border-color: #c2a57570;
   background: linear-gradient(142deg, #e7c98915, transparent 58%), #100e0cce;
   box-shadow: inset 0 1px 0 #ffe3ae30;
@@ -93,7 +93,7 @@
   backdrop-filter: blur(12px);
 }
 
-.poet-page--atmospheric .poet-profile[open] { background-color: #100e0ce8; }
+.ink-page .poet-profile[open] { background-color: #100e0ce8; }
 
 .poet-portrait-feature {
   grid-template-columns: minmax(0, 1fr);
@@ -115,7 +115,7 @@
 
 .poet-portrait-feature figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 
-.reader-page--atmospheric .poet-atmosphere {
+.reader-page--atmospheric .ink-background {
   position: absolute;
   inset: 0 0 auto;
   height: clamp(250px, 44vh, 430px);
@@ -124,20 +124,20 @@
 }
 
 @media (max-width: 900px) {
-  .poet-atmosphere img,
-  .poet-atmosphere video { object-position: 46% center; }
-  .poet-atmosphere-toggle {
+  .ink-background img,
+  .ink-background video { object-position: 46% center; }
+  .ink-background-toggle {
     top: 22px;
     min-height: 44px;
   }
-  .poet-page--atmospheric .section-card {
+  .ink-page .section-card {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .poet-atmosphere video,
-  .poet-atmosphere-toggle { display: none; }
-  .poet-page--atmospheric .section-card::before { transition: none; }
+  .ink-background video,
+  .ink-background-toggle { display: none; }
+  .ink-page .section-card::before { transition: none; }
 }
