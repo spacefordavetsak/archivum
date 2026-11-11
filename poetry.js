@@ -139,7 +139,7 @@ function renderPoetProfile(id){
 }
 
 // Background footage: Dan Cristian Pădureț, Pexels, video 3051492.
-const poetMotionQuery=matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
+const poetMotionQuery=matchMedia('(prefers-reduced-motion: no-preference)');
 let poetBackgroundPaused=false;
 
 function renderPoetAtmosphere(animated=false){
@@ -159,6 +159,7 @@ poetMotionQuery.addEventListener('change',syncPoetBackground);
 function mountPoetBackground(){
   const video=main.querySelector('.poet-atmosphere video');
   const toggle=main.querySelector('.poet-atmosphere-toggle');
+  video.muted=true;
   video.defaultPlaybackRate=1.5;
   video.playbackRate=1.5;
   const updateLabel=()=>{
@@ -166,7 +167,7 @@ function mountPoetBackground(){
       ? (video.paused?'Оживить фон':'Остановить фон')
       : (video.paused?'Play background':'Pause background');
   };
-  video.addEventListener('loadeddata',()=>video.parentElement?.setAttribute('data-video-ready',''));
+  video.addEventListener('playing',()=>video.parentElement?.setAttribute('data-video-ready',''));
   video.addEventListener('play',updateLabel);
   video.addEventListener('pause',updateLabel);
   video.addEventListener('error',()=>{toggle.hidden=true});

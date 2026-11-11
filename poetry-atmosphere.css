@@ -96,18 +96,20 @@
 }
 
 @media (max-width: 900px) {
-  .poet-atmosphere img { object-position: 46% center; }
+  .poet-atmosphere img,
+  .poet-atmosphere video { object-position: 46% center; }
+  .poet-atmosphere-toggle {
+    top: 22px;
+    min-height: 44px;
+  }
   .poet-page--atmospheric .section-card {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 }
 
-@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   .poet-atmosphere video,
   .poet-atmosphere-toggle { display: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
   .poet-page--atmospheric .section-card::before { transition: none; }
 }
