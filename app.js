@@ -14,7 +14,7 @@ const sections = [
   { id:'anime',ru:'Аниме',en:'Anime',image:true,ruDesc:'Миры японской анимации. Истории, авторы и впечатления от просмотра.',enDesc:'Worlds of Japanese animation. Stories, creators, and viewing notes.' },
   { id:'alania',ru:'Алания',en:'Alania',image:true,ruDesc:'Материалы, заметки и исследования об Алании.',enDesc:'Materials, notes, and studies on Alania.' },
   { id:'science',ru:'Наука',en:'Science',image:true,ruDesc:'Научные идеи, открытия и направления. Конспекты и материалы об устройстве мира.',enDesc:'Scientific ideas, discoveries, and fields. Notes on how the world works.' },
-  { id:'my-poems',ru:'Мои стихотворения',en:'My poems',ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
+  { id:'my-poems',ru:'Мои стихотворения',en:'My poems',image:true,ruDesc:'Личная поэтическая тетрадь. Слова, которые обретают собственный ритм.',enDesc:'A personal poetry notebook. Words finding a rhythm of their own.' }
 ];
 const notes = [
   {section:'poetry',poet:'derzhavin',id:'derzhavin-sappho',ru:'Сафо',en:'Sappho',ruDesc:'Гавриил Романович Державин · 1797.',enDesc:'Gavriil Romanovich Derzhavin · 1797.'},
