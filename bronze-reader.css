@@ -1,3 +1,27 @@
+.bronze-reader-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 16px 0;
+  font: 12px/1.4 var(--mono);
+}
+
+.bronze-reader-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.bronze-reader-links a:hover { border-color: var(--gold); }
+.bronze-reader-links .bronze-reader-start { color: var(--gold); border-color: currentColor; }
+.bronze-chapter-header .back-link { margin-bottom: 20px; }
+.bronze-chapter-header h1 { font-size: clamp(32px, 6vw, 58px); }
+
 .note-body .note-bronze-banner {
   position: relative;
   display: flex;

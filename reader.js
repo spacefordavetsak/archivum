@@ -26,14 +26,20 @@ function scrollReaderAnchor(){
   if(route.id===bronzeReferenceId&&main.dataset.noteChapter!==String(bronzeReferenceChapter(route.anchor)))return false;
   if(!route.anchor){window.scrollTo({top:0,behavior:'instant'});return true}
   if(!/^s-\d+$/.test(route.anchor)&&!(route.id==='painting-favourites'&&/^art-[a-z0-9-]+$/.test(route.anchor)))return false;
-  const heading=document.getElementById(route.anchor);
+  let heading=document.getElementById(route.anchor);
   if(!heading)return false;
+  if(route.id===bronzeReferenceId&&heading.matches('.note-bronze-banner'))heading=document.querySelector('#reader-body h2')||heading;
   if(document.getElementById('roadmap-search')?.value&&resetRoadmapSearch)resetRoadmapSearch();
   if(heading.tagName==='DETAILS')heading.open=true;
   const details=[];
   for(let parent=heading.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')details.push(parent);
   details.forEach(detail=>detail.open=true);
-  heading.setAttribute('tabindex','-1');heading.scrollIntoView({block:'start',behavior:'instant'});heading.focus({preventScroll:true});
+  heading.setAttribute('tabindex','-1');
+  if(route.id===bronzeReferenceId){
+    const margin=parseFloat(getComputedStyle(heading).scrollMarginTop)||85;
+    window.scrollTo({top:window.scrollY+heading.getBoundingClientRect().top-margin,behavior:'instant'});
+  }else heading.scrollIntoView({block:'start',behavior:'instant'});
+  heading.focus({preventScroll:true});
   document.querySelectorAll('#reader-toc-links a').forEach(link=>{if(link.getAttribute('href')===`#/note/${route.id}/${route.anchor}`)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')});
   return true;
 }
@@ -69,6 +75,7 @@ async function notePage(id){
     const showContents=note.section!=='poetry'||parts>1;
     document.getElementById('reader-meta').innerHTML=`<span>${id==='horace-to-melpomene'?(language==='ru'?'Русский и латинский':'Russian and Latin'):readerText('originalLanguage')}</span><span>${Math.ceil(data.words/200)} ${readerText('minutes')}</span>${showContents?`<span>${readerPartCount(parts)}</span>`:''}`;
     if(bronze){
+      bronzeReferenceHeader(data);
       if(!data.chapter)document.getElementById('reader-meta').innerHTML=`<span>${readerText('originalLanguage')}</span><span>${data.documents.length} ${language==='ru'?'документов':'documents'}</span><span>${data.images} ${language==='ru'?'карт':'maps'}</span>`;
       if(data.chapter)main.querySelector('.reader-end').innerHTML=bronzeReferenceNavigation(data);
     }
@@ -83,6 +90,9 @@ async function notePage(id){
     }
     installReaderMobileTools(note,data,showContents);
     scrollReaderAnchor();
+    if(bronze&&anchor)requestAnimationFrame(()=>{
+      if(renderNumber===readerRenderNumber&&readerRoute().id===id&&readerRoute().anchor===anchor)scrollReaderAnchor();
+    });
   }catch{
     if(renderNumber!==readerRenderNumber||readerRoute().id!==id)return;
     document.getElementById('reader-content').innerHTML=`<div class="reader-load-error"><p>${readerText('error')}</p><button class="underlined-link" id="reader-retry">${readerText('tryAgain')}</button></div>`;
