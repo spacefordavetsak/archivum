@@ -45,7 +45,8 @@ function scrollReaderAnchor(){
 }
 async function getNoteContent(id){
   if(!readingCache.has(id)){
-    const request=fetch(`notes/${id}.json`).then(response=>{if(!response.ok)throw new Error('Note unavailable');return response.json()}).catch(error=>{readingCache.delete(id);throw error});
+    const version=id===bronzeReferenceId?'?v=overview-2':'';
+    const request=fetch(`notes/${id}.json${version}`).then(response=>{if(!response.ok)throw new Error('Note unavailable');return response.json()}).catch(error=>{readingCache.delete(id);throw error});
     readingCache.set(id,request);
   }
   return readingCache.get(id);
