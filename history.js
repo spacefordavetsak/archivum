@@ -19,6 +19,7 @@ const historyText=key=>historyCopy[language][key];
 const historianNotes=id=>notes.filter(note=>note.historian===id);
 function historyPage(section){
   const cards=historyCollections.map(collection=>({...collection,href:`#/collection/${collection.id}`,meta:`${notes.filter(note=>note.collection===collection.id).length} ${text('materialShort')}`}));
+  cards.push(...notes.filter(note=>note.section===section.id&&!note.collection).map(note=>({...note,note,meta:`RU · ${noteArrow(note)}`})));
   main.innerHTML=`<section class="subpage history-page"><a class="back-link" href="#/"><span aria-hidden="true">←</span>${text('home')}</a><div class="eyebrow">${text('sections')} — 02 / ${sections.length} · ${count(section.id)} ${text('materialShort')}</div><h1>${label(section)}</h1><p class="section-description">${desc(section)}</p>${renderArchiveBlocks(cards)}${sectionNavigation(section)}</section>`;
   document.title=`${label(section)} — ARCHIVUM`;
 }

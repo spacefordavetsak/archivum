@@ -1,0 +1,56 @@
+.note-body .note-bronze-banner {
+  position: relative;
+  display: flex;
+  align-items: end;
+  min-height: clamp(150px, 24vw, 280px);
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+  padding: clamp(15px, 3vw, 28px);
+  scroll-margin-top: 85px;
+}
+
+.note-body .note-bronze-banner::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(transparent 30%, rgba(5, 5, 4, .86));
+  content: '';
+}
+
+.note-body img.note-bronze-art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  filter: saturate(.65) brightness(.8);
+  cursor: auto;
+}
+
+.note-body .note-bronze-banner .note-kicker {
+  margin: 0;
+  color: #f4e7cc;
+}
+
+.note-body .note-bronze-chapters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.note-body .note-bronze-chapters li { padding: 0; margin: 0; border-bottom: 1px solid var(--line); }
+.note-body .note-bronze-chapters a { display: block; padding: 11px 0; text-decoration: none; }
+.note-body .note-bronze-chapters a:hover { color: var(--gold); }
+.note-body .note-bronze-task { list-style: none; }
+.note-body .note-bronze-check { margin-inline-end: .45em; color: var(--gold); }
+.note-body .note-bronze-manifest { display: grid; gap: .75rem; overflow-wrap: anywhere; }
+.note-body .note-bronze-manifest code { display: block; font-size: .65em; }
+.note-body .note-bronze-map h5, .note-body--bronze h5 { font: 500 1.05em/1.3 var(--serif); scroll-margin-top: 85px; }
+.note-body .note-bronze-map { border-block: 1px solid var(--line); padding-block: 16px; }
+.note-body .note-bronze-map img { width: 100%; height: auto; }

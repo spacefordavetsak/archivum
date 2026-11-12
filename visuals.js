@@ -12,10 +12,10 @@ function visualTitle(article,element,fallback){
   return preceding.length?preceding[preceding.length-1].textContent.trim():fallback;
 }
 function enhanceNoteVisuals(article){
-  [...article.querySelectorAll('.note-tree,.note-diagram,img')].forEach(element=>{
+  [...article.querySelectorAll('.note-tree,.note-diagram,img:not(.note-bronze-art)')].forEach(element=>{
     if(element.closest('.archive-visual'))return;
     const kind=element.matches('.note-tree')?'tree':element.tagName==='IMG'?'map':'svg';
-    const title=visualTitle(article,element,visualText(kind));
+    const title=element.closest('.note-bronze-map')?element.alt:visualTitle(article,element,visualText(kind));
     const figure=document.createElement('figure');figure.className='archive-visual';figure.dataset.visualKind=kind;
     figure.innerHTML=`<figcaption class="visual-bar"><span>${visualText(kind)}</span><button type="button" class="visual-expand" aria-label="${visualText('expand')}: ${escapeVisual(title)}">${expandIcon}<span>${visualText('expand')}</span></button></figcaption><div class="visual-scroll" tabindex="0" role="region" aria-label="${escapeVisual(title)}"><div class="visual-canvas"></div></div><p class="visual-hint">${visualText(kind==='map'?'mapHint':'hint')}</p>`;
     element.replaceWith(figure);figure.querySelector('.visual-canvas').append(element);

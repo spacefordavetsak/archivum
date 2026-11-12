@@ -1,4 +1,4 @@
-const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis','plato-republic-1-analysis','plato-republic-2-analysis','plato-republic-3-analysis','plato-republic-4-analysis','plato-apology-analysis','plato-alcibiades-ii-analysis','plato-theages-analysis','painting-favourites','plato-menexenus-analysis','plato-euthydemus-analysis','plato-lesser-hippias-analysis','plato-laches-analysis','plato-lysis-analysis','plato-charmides-analysis','horace-to-romans','zhukovsky-familiar-genius','zhukovsky-country-churchyard','akhmatova-in-memory-of-bulgakov','akhmatova-dark-veil','akhmatova-twenty-first-night-monday','akhmatova-seaside-sonnet','akhmatova-you-thought','akhmatova-native-land','akhmatova-my-letter','balmont-fading-shadows','balmont-yes-and-no','balmont-i-came-into-this-world','balmont-wordlessness','balmont-russian-speech','balmont-i-want','balmont-among-monsters','balmont-i-love-you','balmont-i-hate-humanity','balmont-covenant-of-being','balmont-i-know-no-wisdom','balmont-why-so-stifling','balmont-voice-of-the-devil','balmont-god-and-the-devil','balmont-to-helena','balmont-not-a-day','balmont-i-cannot-understand-hate','horace-to-melpomene','derzhavin-meshchersky','derzhavin-velmozha','derzhavin-plamide','derzhavin-river-of-time','derzhavin-separation','derzhavin-philosophers','derzhavin-gift','derzhavin-crown-of-immortality','derzhavin-sappho','origin-of-evil-essay']);
+const localNoteIds = new Set(['95870a2a-ae02-4622-8287-2e677c46fdad','e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215','64cf4f3d-13e9-47a3-9911-9f92e5b2a57e','platonism-roadmap','machiavelli-discourses','plato-crito-analysis','plato-euthyphro-analysis','plato-parmenides-analysis','plato-sophist-analysis','plato-philebus-analysis','plato-republic-1-analysis','plato-republic-2-analysis','plato-republic-3-analysis','plato-republic-4-analysis','plato-apology-analysis','plato-alcibiades-ii-analysis','plato-theages-analysis','painting-favourites','plato-menexenus-analysis','plato-euthydemus-analysis','plato-lesser-hippias-analysis','plato-laches-analysis','plato-lysis-analysis','plato-charmides-analysis','horace-to-romans','zhukovsky-familiar-genius','zhukovsky-country-churchyard','akhmatova-in-memory-of-bulgakov','akhmatova-dark-veil','akhmatova-twenty-first-night-monday','akhmatova-seaside-sonnet','akhmatova-you-thought','akhmatova-native-land','akhmatova-my-letter','balmont-fading-shadows','balmont-yes-and-no','balmont-i-came-into-this-world','balmont-wordlessness','balmont-russian-speech','balmont-i-want','balmont-among-monsters','balmont-i-love-you','balmont-i-hate-humanity','balmont-covenant-of-being','balmont-i-know-no-wisdom','balmont-why-so-stifling','balmont-voice-of-the-devil','balmont-god-and-the-devil','balmont-to-helena','balmont-not-a-day','balmont-i-cannot-understand-hate','horace-to-melpomene','derzhavin-meshchersky','derzhavin-velmozha','derzhavin-plamide','derzhavin-river-of-time','derzhavin-separation','derzhavin-philosophers','derzhavin-gift','derzhavin-crown-of-immortality','derzhavin-sappho','origin-of-evil-essay',bronzeReferenceId]);
 const readingCache = new Map();
 let readerRenderNumber = 0;
 const readerCopy = {
@@ -14,13 +14,16 @@ function readerRoute(){const parts=location.hash.replace(/^#\/?/,'').split('/');
 
 function drawContents(note,data,query='',target='reader-toc-links'){
   const normalized=normalize(query);
-  const entries=data.toc.filter(entry=>normalized?normalize(entry.title).includes(normalized):entry.level===2);
+  const source=normalized&&data.searchToc?data.searchToc:data.toc;
+  const matches=source.filter(entry=>normalized?normalize(entry.title).includes(normalized):entry.level===2);
+  const entries=normalized&&data.searchToc?matches.slice(0,120):matches;
   const current=readerRoute().anchor;
   document.getElementById(target).innerHTML=entries.length?entries.map(entry=>`<li${entry.level===3?' class="toc-subheading"':''}><a href="#/note/${note.id}/${entry.id}"${current===entry.id?' aria-current="location"':''}>${escapeHTML(entry.title)}</a></li>`).join(''):`<li class="toc-empty">${readerText('nothing')}</li>`;
 }
 function scrollReaderAnchor(){
   const route=readerRoute();
   if(route.type!=='note'||main.dataset.noteId!==route.id||!document.getElementById('reader-body'))return false;
+  if(route.id===bronzeReferenceId&&main.dataset.noteChapter!==String(bronzeReferenceChapter(route.anchor)))return false;
   if(!route.anchor){window.scrollTo({top:0,behavior:'instant'});return true}
   if(!/^s-\d+$/.test(route.anchor)&&!(route.id==='painting-favourites'&&/^art-[a-z0-9-]+$/.test(route.anchor)))return false;
   const heading=document.getElementById(route.anchor);
@@ -42,27 +45,35 @@ async function getNoteContent(id){
   return readingCache.get(id);
 }
 async function notePage(id){
+  const bronze=id===bronzeReferenceId;
+  const anchor=readerRoute().anchor;
   const note=notes.find(item=>item.id===id&&localNoteIds.has(id));
   if(!note){delete main.dataset.noteId;main.innerHTML=`<section class="subpage"><h1>${text('notFound')}</h1><a class="underlined-link" href="#/">${text('back')}</a></section>`;return}
   const languageLabel=id==='horace-to-melpomene'?'RU · LA':'RU';
   const renderNumber=++readerRenderNumber;
   main.dataset.noteId=id;
+  delete main.dataset.noteChapter;
   const section=sections.find(item=>item.id===note.section);
   const collection=noteCollection(note);
   const siblings=notes.filter(item=>item.section===note.section&&item.philosopher===note.philosopher&&item.dialogue===note.dialogue&&item.collection===note.collection&&item.historian===note.historian&&item.poet===note.poet&&localNoteIds.has(item.id));
   const noteIndex=siblings.indexOf(note),previous=siblings[noteIndex-1],next=siblings[noteIndex+1];
   const atmospheric=Boolean(note.poet)||note.philosopher==='plato';
-  const startLabel=note.section==='essays'&&language==='ru'?'В начало эссе':readerText('start');
+  const startLabel=bronze?(language==='ru'?'К оглавлению справочника':'Back to the reference index'):note.section==='essays'&&language==='ru'?'В начало эссе':readerText('start');
   main.innerHTML=`<section class="reader-page${atmospheric?' reader-page--atmospheric':''}">${atmospheric?renderInkBackground():''}<header class="reader-header"><a class="back-link" href="${collection.href}"><span aria-hidden="true">←</span>${collection.name}</a><div class="eyebrow">${label(section)} <span aria-hidden="true">·</span> ${languageLabel} <span aria-hidden="true">·</span> <span>${readerText('fullText')}</span></div><h1>${label(note)}</h1><p class="reader-description">${desc(note)}</p><div class="reader-meta" id="reader-meta"><span>${readerText('originalLanguage')}</span></div></header><div id="reader-content" aria-live="polite"><p class="reader-status">${note.section==='essays'?(language==='ru'?'Загружаем эссе…':'Loading the essay…'):readerText('loading')}</p></div><nav class="reader-end" aria-label="${text('materials')}">${previous?`<a ${noteLinkAttributes(previous)}><span class="nav-caption">${readerText('previous')}</span>← ${label(previous)}</a>`:`<a href="${collection.href}"><span class="nav-caption">${readerText('back')}</span>← ${collection.name}</a>`}${next?`<a ${noteLinkAttributes(next)}><span class="nav-caption">${readerText('next')}</span>${label(next)} →</a>`:`<a href="#/note/${id}">${startLabel} ↑</a>`}</nav></section>`;
   document.title=`${label(note)} — ARCHIVUM`;
   try{
-    const data=await getNoteContent(id);
+    const data=await (bronze?getBronzeReference(anchor):getNoteContent(id));
     if(renderNumber!==readerRenderNumber||readerRoute().type!=='note'||readerRoute().id!==id)return;
+    if(bronze)main.dataset.noteChapter=String(data.chapter);
     const parts=data.toc.filter(entry=>entry.level===2).length;
     const showContents=note.section!=='poetry'||parts>1;
     document.getElementById('reader-meta').innerHTML=`<span>${id==='horace-to-melpomene'?(language==='ru'?'Русский и латинский':'Russian and Latin'):readerText('originalLanguage')}</span><span>${Math.ceil(data.words/200)} ${readerText('minutes')}</span>${showContents?`<span>${readerPartCount(parts)}</span>`:''}`;
+    if(bronze){
+      if(!data.chapter)document.getElementById('reader-meta').innerHTML=`<span>${readerText('originalLanguage')}</span><span>${data.documents.length} ${language==='ru'?'документов':'documents'}</span><span>${data.images} ${language==='ru'?'карт':'maps'}</span>`;
+      if(data.chapter)main.querySelector('.reader-end').innerHTML=bronzeReferenceNavigation(data);
+    }
     const sidebar=showContents?`<aside class="reader-sidebar"><details class="reader-contents"${matchMedia('(min-width: 901px)').matches?' open':''}><summary>${readerText('contents')}<span aria-hidden="true">＋</span></summary><div class="reader-contents-inner"><input type="search" id="reader-toc-search" placeholder="${readerText('findChapter')}" aria-label="${readerText('chapterSearch')}" autocomplete="off"><nav aria-label="${readerText('contents')}"><ul id="reader-toc-links"></ul></nav></div></details><a class="reader-top-link" href="#/note/${id}">${startLabel} ↑</a></aside>`:'';
-    document.getElementById('reader-content').innerHTML=`<div class="reader-layout${showContents?'':' reader-layout--single'}">${sidebar}<article id="reader-body" class="note-body" lang="ru" aria-label="${escapeHTML(note.ru)}">${data.html}</article></div>`;
+    document.getElementById('reader-content').innerHTML=`<div class="reader-layout${showContents?'':' reader-layout--single'}">${sidebar}<article id="reader-body" class="note-body${bronze?' note-body--bronze':''}" lang="ru" aria-label="${escapeHTML(note.ru)}">${data.html}</article></div>`;
     if(note.id!=='painting-favourites')enhanceNoteVisuals(document.getElementById('reader-body'));
     installRoadmapSearch(document.getElementById('reader-body'));
     installArtGallery(document.getElementById('reader-body'),note,data);
@@ -85,7 +96,7 @@ function installReaderMobileTools(note,data,showContents){
   tools.innerHTML=`${showContents?`<button type="button" data-reader-contents><span aria-hidden="true">☷</span>${readerText('contents')}</button>`:''}<button type="button" data-reader-top>${language==='ru'?'Наверх':'Top'}<span aria-hidden="true">↑</span></button>`;
   main.querySelector('.reader-page').append(tools);
   tools.querySelector('[data-reader-contents]')?.addEventListener('click',()=>openMobileContents(note,data));
-  tools.querySelector('[data-reader-top]').addEventListener('click',()=>{if(readerRoute().anchor)location.hash=`#/note/${note.id}`;window.scrollTo({top:0,behavior:'instant'})});
+  tools.querySelector('[data-reader-top]').addEventListener('click',()=>{if(note.id!==bronzeReferenceId&&readerRoute().anchor)location.hash=`#/note/${note.id}`;window.scrollTo({top:0,behavior:'instant'})});
 }
 function openMobileContents(note,data){
   if(!mobileContentsDialog){mobileContentsDialog=document.createElement('dialog');mobileContentsDialog.className='reader-toc-dialog reader-overlay';mobileContentsDialog.setAttribute('aria-labelledby','mobile-contents-title');document.body.append(mobileContentsDialog)}
