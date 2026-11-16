@@ -14,7 +14,7 @@ const literatureCollections=[
   {id:'literature-english',section:'literature',ru:'Английская литература',en:'English Literature',image:'assets/english-literature-joyce.jpeg',imagePosition:'center 8%',ruDesc:'Произведения и авторы английской литературы.',enDesc:'Works and authors of English literature.'},
   {id:'literature-german',section:'literature',ru:'Немецкая литература',en:'German Literature',image:'assets/german-literature-hesse.jpg',imagePosition:'center 87%',ruDesc:'Произведения и авторы немецкой литературы.',enDesc:'Works and authors of German literature.'},
   {id:'literature-italian',section:'literature',ru:'Итальянская литература',en:'Italian Literature',ruDesc:'Произведения и авторы итальянской литературы.',enDesc:'Works and authors of Italian literature.'},
-  {id:'literature-american',section:'literature',ru:'Американская литература',en:'American Literature',ruDesc:'Произведения и авторы американской литературы.',enDesc:'Works and authors of American literature.'},
+  {id:'literature-american',section:'literature',ru:'Американская литература',en:'American Literature',image:'assets/american-literature-faulkner.jpeg',imagePosition:'center 19%',ruDesc:'Произведения и авторы американской литературы.',enDesc:'Works and authors of American literature.'},
   {id:'literature-spanish',section:'literature',ru:'Испанская литература',en:'Spanish Literature',ruDesc:'Произведения и авторы испанской литературы.',enDesc:'Works and authors of Spanish literature.'},
   {id:'literature-russian',section:'literature',ru:'Русская литература',en:'Russian Literature',ruDesc:'Произведения и авторы русской литературы.',enDesc:'Works and authors of Russian literature.'}
 ];
