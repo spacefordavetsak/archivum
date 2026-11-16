@@ -9,7 +9,7 @@ const religionCollections=[
   {id:'shinto',section:'religion',ru:'Синтоизм',en:'Shinto',image:'assets/shinto-cover.jpeg',imagePosition:'48% 49%',ruDesc:'Тексты, конспекты и заметки по синтоизму.',enDesc:'Texts, reading notes, and reflections on Shinto.'}
 ];
 const literatureCollections=[
-  {id:'literature-antiquity',section:'literature',ru:'Античность',en:'Classical Antiquity',ruDesc:'Произведения и авторы Древней Греции и Рима.',enDesc:'Works and authors of ancient Greece and Rome.'},
+  {id:'literature-antiquity',section:'literature',ru:'Античность',en:'Classical Antiquity',image:'assets/antiquity-literature-epicurus.jpeg',imagePosition:'center 28%',ruDesc:'Произведения и авторы Древней Греции и Рима.',enDesc:'Works and authors of ancient Greece and Rome.'},
   {id:'literature-french',section:'literature',ru:'Французская литература',en:'French Literature',image:'assets/french-literature-proust.jpeg',imagePosition:'center 28%',ruDesc:'Произведения и авторы французской литературы.',enDesc:'Works and authors of French literature.'},
   {id:'literature-english',section:'literature',ru:'Английская литература',en:'English Literature',image:'assets/english-literature-joyce.jpeg',imagePosition:'center 8%',ruDesc:'Произведения и авторы английской литературы.',enDesc:'Works and authors of English literature.'},
   {id:'literature-german',section:'literature',ru:'Немецкая литература',en:'German Literature',image:'assets/german-literature-hesse.jpg',imagePosition:'center 87%',ruDesc:'Произведения и авторы немецкой литературы.',enDesc:'Works and authors of German literature.'},
