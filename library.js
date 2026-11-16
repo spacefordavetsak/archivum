@@ -16,7 +16,7 @@ const literatureCollections=[
   {id:'literature-italian',section:'literature',ru:'Итальянская литература',en:'Italian Literature',image:'assets/italian-literature-bassani.jpeg',imagePosition:'center 43%',ruDesc:'Произведения и авторы итальянской литературы.',enDesc:'Works and authors of Italian literature.'},
   {id:'literature-american',section:'literature',ru:'Американская литература',en:'American Literature',image:'assets/american-literature-faulkner.jpeg',imagePosition:'center 19%',ruDesc:'Произведения и авторы американской литературы.',enDesc:'Works and authors of American literature.'},
   {id:'literature-spanish',section:'literature',ru:'Испанская литература',en:'Spanish Literature',image:'assets/spanish-literature-vargas-llosa.jpeg',imagePosition:'center 73%',ruDesc:'Произведения и авторы испанской литературы.',enDesc:'Works and authors of Spanish literature.'},
-  {id:'literature-russian',section:'literature',ru:'Русская литература',en:'Russian Literature',ruDesc:'Произведения и авторы русской литературы.',enDesc:'Works and authors of Russian literature.'}
+  {id:'literature-russian',section:'literature',ru:'Русская литература',en:'Russian Literature',image:'assets/russian-literature-portrait.jpg',imagePosition:'center 32%',ruDesc:'Произведения и авторы русской литературы.',enDesc:'Works and authors of Russian literature.'}
 ];
 const archiveCollections=()=>[...philosophyCollections,...historyCollections,...religionCollections,...literatureCollections];
 const collectionHref=collection=>collection.noteId?`#/note/${collection.noteId}`:`#/collection/${collection.id}`;
