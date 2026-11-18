@@ -45,7 +45,7 @@ function scrollReaderAnchor(){
 }
 async function getNoteContent(id){
   if(!readingCache.has(id)){
-    const version=id===bronzeReferenceId?'?v=overview-2':'';
+    const version=id===bronzeReferenceId?'?v=overview-2':id==='plato-republic-5-analysis'?'?v=full-1':'';
     const request=fetch(`notes/${id}.json${version}`).then(response=>{if(!response.ok)throw new Error('Note unavailable');return response.json()}).catch(error=>{readingCache.delete(id);throw error});
     readingCache.set(id,request);
   }
