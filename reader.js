@@ -3,7 +3,7 @@ const readingCache = new Map();
 const noteContentVersions = new Map([
   [bronzeReferenceId, 'overview-2'],
   ['plato-republic-5-analysis', 'full-1'],
-  ['plato-sophist-analysis', '2026-11-19'],
+  ['plato-sophist-analysis', 'original-restored-1'],
 ]);
 let readerRenderNumber = 0;
 const readerCopy = {
