@@ -37,31 +37,64 @@ const poetProfiles = {
   horace: {
     ru: {
       dates: '65–8 до н. э.',
-      biography: [
-        'Квинт Гораций Флак родился в Венузии на юге Италии. Его отец, вольноотпущенник, дал сыну образование в Риме. Гораций продолжил учёбу в Афинах, затем служил военным трибуном в войске Брута и участвовал в битве при Филиппах в 42 году до н. э.',
-        'Вернувшись в Рим, Гораций сблизился с Вергилием и вошёл в круг Мецената. На годы правления Августа пришлась зрелая пора его творчества. Для Секулярных игр 17 года до н. э. он написал «Юбилейный гимн».'
+      lifeSections: [
+        ['Венузия, Рим и Афины', [
+          'Квинт Гораций Флак родился 8 декабря 65 года до н. э. в Венузии, римской колонии на границе Апулии и Лукании. Его отец был вольноотпущенником и, по сведениям Светония, работал на аукционах. Сам Гораций родился свободным, но происхождение отца могло стать поводом для упрёков. В шестой сатире первой книги поэт открыто говорит о своём происхождении и с благодарностью вспоминает, как отец отвёз его учиться в Рим и сам сопровождал на занятия. Он приписывает отцу и первые уроки нравственного суждения: тот объяснял ему последствия поступков на примерах знакомых людей. Впоследствии этот способ рассуждения пригодился Горацию в сатирах.',
+          'В Риме он учился у Орбилия, которого в одном из поздних посланий вспоминает как сурового наставника. Затем Гораций отправился в Афины. В «Послании к Флору» он говорит, что искал там ответ на вопрос о различии между прямым и кривым, то есть о верном и ошибочном в человеческих поступках. Афинские годы дали ему возможность близко познакомиться с греческой литературой и философией. Их след заметен и в размерах его будущих од, и в том, как его стихотворные собеседники спорят о хорошей жизни.'
+        ]],
+        ['Гражданская война и возвращение в Италию', [
+          'После убийства Юлия Цезаря в 44 году до н. э. в Афины прибыл Марк Юний Брут. Гораций вступил в его войско и получил должность военного трибуна. В 42 году до н. э. при Филиппах силы Брута и Кассия потерпели поражение от армий Антония и Октавиана. Много лет спустя, в оде к Помпею Вару (II, 7), Гораций вспоминает Филиппы и оставленный на поле боя щит. Этот эпизод напоминает о греческой лирической традиции, в которой о потерянном щите писал Архилох. В самой оде воспоминание о разгроме переходит в радость от встречи двух людей, переживших войну.',
+          'После поражения республиканцев Гораций получил помилование и вернулся к гражданской жизни. Семейное имущество было утрачено. В послании к Флору поэт связывает начало своей литературной работы с нуждой после войны. Светоний сообщает, что Гораций приобрёл должность квесторского писца. Работа при ведомстве, ведавшем государственными финансами, дала ему средства жить в Риме и заниматься стихами. К этому периоду относятся ранние опыты в двух разных жанрах: гекзаметрические «Сатиры» и ямбические стихотворения, впоследствии собранные в «Эподы».'
+        ]],
+        ['Меценат и сабинское имение', [
+          'Вергилий и Луций Варий Руф представили Горация Гаю Цильнию Меценату, близкому соратнику Октавиана. По рассказу самого Горация, после первой, довольно неловкой встречи Меценат позвал его к себе лишь через девять месяцев. Спустя годы поэт обратится к нему в оде, открывающей первую книгу лирики. А в сатире о поездке в Брундизий (I, 5) Гораций вспоминает общую дорогу. За переговорами влиятельных римлян стихотворение почти не следит. Из поездки поэт выносит совсем другие подробности: дурную воду, бессонную ночь из-за лягушек и комаров и радость от встречи с Вергилием и Варием.',
+          'Первая книга «Сатир» появилась в середине 30-х годов до н. э., а вторая и сборник «Эподы» — около 30 года до н. э., когда война Октавиана с Антонием уже подошла к концу. У современников Горация вопрос о том, как снова жить вместе после гражданских войн, был частью повседневности. У него он возникает и в резких ямбах о римских распрях, и в разговорах о том, сколько власти над человеком имеют деньги, связи и честолюбие.',
+          'У Горация появилось имение в Сабинских горах. Его часто считают подарком Мецената, хотя прямого подтверждения этому нет ни у поэта, ни у Светония. Во второй книге «Сатир» (II, 6) загородный дом становится местом, где можно распоряжаться своим временем, беседовать за простым столом и читать. В седьмом послании первой книги Гораций пишет Меценату о своём нежелании спешить обратно в Рим. В этих стихах благодарность за дружбу сочетается с попыткой защитить право на уединение и собственный распорядок.'
+        ]],
+        ['Август и последние годы', [
+          'Первые три книги «Од» вышли в 23 году до н. э., уже при Августе. К этому времени Гораций прошёл путь от офицера проигравшей стороны до поэта, к которому обращался сам правитель. Светоний приводит письмо Августа с предложением взять Горация к себе секретарём. Поэт отклонил предложение, и их отношения продолжились. В 17 году до н. э. по поручению Августа он написал «Юбилейный гимн» для Секулярных игр. Его исполняли юноши и девушки, обращаясь к Аполлону и Диане с просьбами о благополучии Рима. Личная лирика Горация получила здесь форму публичной молитвы от имени общины.',
+          'Около 13 года до н. э. появилась четвёртая книга «Од». В ней соседствуют стихи о победах Друза и Тиберия, поздняя любовная лирика и размышления о смерти. В оде IV, 7 весна возвращается к земле, тогда как человек проживает своё время лишь однажды. Гораций умер 27 ноября 8 года до н. э., вскоре после Мецената. По свидетельству Светония, его похоронили рядом с другом на Эсквилине. Рассказ о последних годах сохранился в античном жизнеописании, а о собственных тревогах и повседневном укладе поэта больше всего говорят его послания и оды.'
+        ]]
       ],
       traits: [
-        ['Греческая форма, латинская речь', 'В «Одах» Гораций приспособил к латинскому стиху размеры Алкея и Сапфо. В оде «К Мельпомене» он связывает надежду на бессмертие со своим вкладом в римскую поэзию.'],
-        ['Мера и быстротечность жизни', 'Размышляя о дружбе, вине и старости, поэт возвращается к мысли о мере. Призыв carpe diem в оде к Левконое напоминает, что будущим человек не распоряжается.'],
-        ['Сатира как беседа', 'В «Сатирах» разговорная интонация и самоирония помогают говорить о жадности, тщеславии и зависимости от чужого мнения. В «Посланиях» та же манера служит размышлениям о том, как жить и писать.'],
-        ['Гражданская лирика', 'Рядом с дружескими и любовными стихами стоят «Римские оды». В них Гораций говорит о долге и нравах, от которых, по его мысли, зависит прочность государства.']
+        ['«Сатиры» и «Эподы»', 'Гекзаметрические «Сатиры» устроены как беседы. Поэт даёт собеседникам возражать, вводит бытовые сценки и позволяет читателю смеяться над рассказчиком. В «Эподах» интонация резче. Здесь слышна ямбическая традиция Архилоха, а пережитая гражданская война становится поводом спрашивать, почему римляне снова обращают оружие друг против друга.'],
+        ['Оды и искусство меры', 'Гораций освоил строфы Алкея и Сапфо и другие греческие размеры, чтобы писать на латыни о дружбе, любви, вине, долге и старости. В оде к Левконое (I, 11) призыв carpe diem возникает в разговоре о границах знания: будущее нам неизвестно, и откладывать жизнь на потом рискованно. В оде к Лицинию (II, 10) образ золотой середины связан с умением менять поведение вместе с обстоятельствами.'],
+        ['Римские оды и «К Мельпомене»', 'Шесть первых стихотворений третьей книги принято называть «Римскими одами». В оде «К римлянам» (III, 6) поэт связывает судьбу государства с нравами его граждан. «К Мельпомене» (III, 30), завершающая книгу, обращена к будущему самого поэта. Свой вклад он видит в том, что дал эолийской лирике латинский голос. Образ поэтического памятника получил самостоятельную жизнь у Державина и Пушкина. Оба текста Горация в архиве представлены в переводе Афанасия Фета.'],
+        ['«Послания» и «Наука поэзии»', 'В стихотворных письмах Гораций размышляет о привычках, свободе и работе над собой, обращаясь к конкретным собеседникам. «Послание к Пизонам», известное как «Наука поэзии», переносит разговор на ремесло автора. Горация занимают цельность произведения, уместность речи, труд правки и способность стиха одновременно доставлять удовольствие и приносить пользу. Позднее к этому тексту обращались европейские авторы, когда формулировали правила поэтики.']
       ]
     },
     en: {
       dates: '65–8 BCE',
-      biography: [
-        'Quintus Horatius Flaccus was born in Venusia in southern Italy. His father, a freedman, secured an education for him in Rome. Horace continued his studies in Athens, then served as a military tribune under Brutus and fought at Philippi in 42 BCE.',
-        'Back in Rome, Horace became friends with Virgil and joined the circle of Maecenas. His mature work belongs to the age of Augustus. For the Secular Games of 17 BCE, he wrote the Carmen Saeculare.'
+      lifeSections: [
+        ['Venusia, Rome and Athens', [
+          'Quintus Horatius Flaccus was born on 8 December 65 BCE in Venusia, a Roman colony on the border of Apulia and Lucania. His father was a freedman and, according to Suetonius, worked at auctions. Horace was freeborn, but his father’s origins could still be held against him. In Satires 1.6 he speaks openly about his family and remembers with gratitude how his father took him to Rome to study and accompanied him to his lessons. He also credits his father with teaching him to judge conduct by considering the consequences of actions he saw in people around him. This way of reasoning later served him well in his satires.',
+          'In Rome he studied under Orbilius, whom he remembers as a stern teacher in a late epistle. He then went to Athens. In his letter to Florus, he recalls looking for a way to distinguish the straight from the crooked, an image for deciding what is right in human conduct. His years in Athens brought him into close contact with Greek literature and philosophy. Their influence appears in the metres of his later odes and in the way speakers in his poems argue about how to live well.'
+        ]],
+        ['Civil war and the return to Italy', [
+          'After Julius Caesar was killed in 44 BCE, Marcus Junius Brutus came to Athens. Horace joined his army as a military tribune. In 42 BCE the forces of Brutus and Cassius were defeated at Philippi by the armies of Antony and Octavian. Many years later, in his ode to Pompeius Varus (2.7), Horace remembers Philippi and the shield he left behind. The episode recalls the Greek lyric tradition in which Archilochus wrote about losing his shield. In Horace’s ode, the memory of defeat gives way to the joy of a reunion between two survivors.',
+          'Horace was pardoned after the defeat and returned to civilian life. The family property was lost. In his epistle to Florus he attributes his beginnings as a poet to the poverty that followed the war. Suetonius reports that Horace bought a position as a quaestor’s clerk. Working in public finance gave him a means of living in Rome and writing. His early work took two forms, the hexameter poems later collected as the Satires and the iambic poems later collected as the Epodes.'
+        ]],
+        ['Maecenas and the Sabine estate', [
+          'Virgil and Lucius Varius Rufus introduced Horace to Gaius Cilnius Maecenas, a close ally of Octavian. In Horace’s account, their first meeting was awkward, and Maecenas waited nine months before sending for him again. Their lasting friendship appears in the poems addressed to Maecenas, including the ode that opens the first three books of lyrics. In the satire about the journey to Brundisium (1.5), Horace remembers the trip they took together. Members of a diplomatic mission appear alongside friends putting up with the discomforts of the road and making fun of one another.',
+          'The first book of Satires appeared in the mid-30s BCE. The second book and the Epodes followed around 30 BCE, as the war between Octavian and Antony came to an end. For Horace’s contemporaries, learning how to live together after the civil wars was an everyday concern. It surfaces in his sharp iambics on Roman strife and in his conversations about the power of money, connections and ambition over a person’s life.',
+          'Horace acquired an estate in the Sabine hills. It is often described as a gift from Maecenas, although neither Horace nor Suetonius directly confirms that. In Satires 2.6 the country house offers a place to spend time as he wishes, talk over a simple meal and read. In Epistles 1.7 he writes to Maecenas about his reluctance to hurry back to Rome. In these poems, gratitude for friendship accompanies a desire for solitude and control of his own time.'
+        ]],
+        ['Augustus and the last years', [
+          'The first three books of Odes appeared in 23 BCE, during the rule of Augustus. By then Horace had gone from serving as an officer on the losing side to being approached by the ruler himself. Suetonius quotes a letter in which Augustus offers to make Horace his secretary. Horace declined, and cordial relations continued. In 17 BCE he wrote the Secular Hymn for the Secular Games at Augustus’s request. A choir of boys and girls appealed to Apollo and Diana for Rome’s prosperity. The lyric voice Horace used for personal themes here became a public prayer on behalf of the community.',
+          'A fourth book of Odes followed around 13 BCE. It includes poems on the victories of Drusus and Tiberius as well as late love poetry and reflections on death. In Ode 4.7 the spring returns to the earth while each person’s time passes only once. Horace died on 27 November 8 BCE, shortly after Maecenas. Suetonius says he was buried near his friend on the Esquiline Hill. The ancient biography records his last years, while his epistles and odes tell us more about his preoccupations and the routines of his life.'
+        ]]
       ],
       traits: [
-        ['Greek metres in Latin', 'In the Odes, Horace adapted the metres of Alcaeus and Sappho to Latin verse. In To Melpomene, he connects his hope of outliving his death with that contribution to Roman poetry.'],
-        ['Moderation and the passing of time', 'Friendship, wine and ageing lead Horace back to the idea of moderation. The call to carpe diem in his ode to Leuconoe reminds the reader how little control anyone has over the future.'],
-        ['Satire as conversation', 'In the Satires, a conversational voice and self-mockery make room for reflections on greed, vanity and the need for approval. In the Epistles, that voice considers how to live and how to write.'],
-        ['Civic poetry', 'Alongside poems of friendship and love stand the Roman Odes. They ask how duty and public morals sustain the state.']
+        ['Satires and Epodes', 'The hexameter Satires work like conversations. Horace gives speakers room to object, introduces scenes from ordinary life and lets readers laugh at the narrator. The Epodes are sharper in tone. The iambic tradition of Archilochus comes through in these poems, while the experience of civil war leads Horace to ask why Romans have again turned their weapons on one another.'],
+        ['The Odes and the art of moderation', 'Horace adapted the stanzas of Alcaeus and Sappho and other Greek metres to write in Latin about friendship, love, wine, duty and age. In the ode to Leuconoe (1.11), carpe diem follows a reflection on what we can know. The future is uncertain, and putting off life carries a risk. In the ode to Licinius (2.10), the golden mean involves adapting our conduct as circumstances change.'],
+        ['The Roman Odes and To Melpomene', 'The first six poems of Book III are commonly known as the Roman Odes. In To the Romans (3.6), Horace links the fate of the state to the character of its citizens. To Melpomene (3.30), at the close of the book, looks toward the poet’s own future. Horace sees his achievement in giving Aeolian lyric a Latin voice. The image of the poetic monument took on a life of its own in the work of Derzhavin and Pushkin. Both of Horace’s odes are available here in Afanasy Fet’s Russian translation.'],
+        ['Epistles and the Art of Poetry', 'In his verse letters, Horace addresses particular people as he considers habits, freedom and self-discipline. The Epistle to the Pisos, known as the Art of Poetry, takes up the writer’s craft. Horace considers the unity of a work, the right language for each speaker, the labour of revision and the ability of verse to give pleasure and offer instruction. Later European authors drew on the poem when formulating principles of literary composition.']
       ]
     },
     sources: [
+      {ru:'Руниверсалис — Гораций',en:'Runiversalis — Horace (in Russian)',url:'https://руни.рф/Гораций'},
+      {ru:'Светоний — Жизнеописание Горация',en:'Suetonius — Life of Horace',url:'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/de_Poetis/Horace*.html'},
+      {ru:'Сочинения Горация — Perseus Digital Library',en:'Works of Horace — Perseus Digital Library',url:'https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:phi0893/'},
       {ru:'Академия американских поэтов',en:'Academy of American Poets',url:'https://poets.org/poet/horace'},
       {ru:'Национальная электронная библиотека',en:'National Electronic Library',url:'https://kp.rusneb.ru/item/material/opera-21'},
       {ru:'Cambridge University Press',en:'Cambridge University Press',url:'https://assets.cambridge.org/97805217/57461/excerpt/9780521757461_excerpt.pdf'}
@@ -109,6 +142,8 @@ function renderPoetProfile(id){
   const profile=poetProfiles[id] ?? additionalPoetProfiles[id];
   if(!profile)return '';
   const copy=profile[language];
+  const longBiography=Boolean(copy.lifeSections?.length);
+  const renderParagraphs=paragraphs=>paragraphs.map(paragraph=>`<p>${escapeHTML(paragraph)}</p>`).join('');
   const labels=language==='ru'
     ? {title:'Биография и творчество',biography:'Биография',traits:'Основные черты творчества',sources:'Источники'}
     : {title:'Life and work',biography:'Biography',traits:'Key features',sources:'Sources'};
@@ -119,11 +154,11 @@ function renderPoetProfile(id){
       <span class="poet-profile-dates">${escapeHTML(copy.dates)}</span>
       <span class="poet-profile-chevron" aria-hidden="true"></span>
     </summary>
-    <div class="poet-profile-body">
+    <div class="poet-profile-body${longBiography?' poet-profile-body--long':''}">
       <div class="poet-profile-columns">
         <section>
           <h2>${labels.biography}</h2>
-          ${copy.biography.map(paragraph=>`<p>${escapeHTML(paragraph)}</p>`).join('')}
+          ${longBiography ? copy.lifeSections.map(([heading,paragraphs])=>`<div class="poet-life-section"><h3>${escapeHTML(heading)}</h3>${renderParagraphs(paragraphs)}</div>`).join('') : renderParagraphs(copy.biography)}
         </section>
         <section>
           <h2>${labels.traits}</h2>
