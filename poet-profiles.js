@@ -2,29 +2,72 @@ const additionalPoetProfiles = {
   akhmatova: {
     ru: {
       dates: '1889–1966',
-      biography: [
-        'Анна Горенко родилась под Одессой, а детство провела в Царском Селе. Под именем Анны Ахматовой она вошла в петербургский круг акмеистов. Сборники «Вечер» (1912) и «Чётки» (1914) принесли ей известность.',
-        'В годы репрессий её сын Лев Гумилёв неоднократно подвергался арестам. После начала блокады Ахматову эвакуировали из Ленинграда, и часть войны она провела в Ташкенте. В поздние годы завершила «Поэму без героя» и выпустила сборник «Бег времени».'
+      lifeSections: [
+        ['От Большого Фонтана до Царского Села', [
+          'Анна Андреевна Горенко родилась 23 июня 1889 года (11 июня по старому стилю) в Большом Фонтане под Одессой, в семье отставного морского инженера. Когда ей был год, семья переехала в Царское Село. В поздней автобиографии Ахматова вспоминала, как училась читать по азбуке Толстого, а французскую речь слышала на уроках старших детей. Парки, пруды и вокзал Царского Села узнаваемы в её стихах. В написанном в 1958 году стихотворении «Здесь всё меня переживёт…» знакомая местность становится мерой человеческого времени. Ветхие скворечни и цветущая черешня переживут ту, что сейчас на них смотрит.',
+          'После расставания родителей в 1905 году Анна жила с матерью в Евпатории, затем окончила гимназию в Киеве и поступила на юридическое отделение Высших женских курсов. Позже она вернулась в Петербург и продолжила учёбу на историко-литературных курсах. Для публикаций Анна Горенко избрала имя Ахматова, связанное с её материнским родом. Среди поэтов, определивших её вкус, она особенно выделяла Иннокентия Анненского. Его посмертный «Кипарисовый ларец» стал для неё одним из важнейших поэтических открытий.'
+        ]],
+        ['Гумилёв, «Цех поэтов» и первые книги', [
+          'В 1910 году Анна вышла замуж за Николая Гумилёва. Они поехали в Париж, куда она вновь вернулась весной 1911 года. Там она общалась с Амедео Модильяни, оставившим её рисунки. В Петербурге Ахматова участвовала в работе «Цеха поэтов» и вошла в круг акмеистов вместе с Гумилёвым и Осипом Мандельштамом. В 1912 году тиражом всего триста экземпляров появился её первый сборник «Вечер». В том же году родился её сын Лев. За «Вечером» последовали «Чётки» (1914) и «Белая стая» (1917).',
+          'В ранних стихах Ахматовой читатель часто застаёт разговор в минуту разрыва или сразу после него. В стихотворении «Сжала руки под тёмной вуалью…» героиня вспоминает свой бег за уходящим человеком, а его будничная реплика в финале оставляет между ними почти непреодолимую дистанцию. Такая точность жеста и интонации многое объясняет в успехе первых книг. С войной и революцией круг тем расширился. Ахматова осталась в России, и вопрос о цене этого решения вошёл в стихотворения «Мне голос был. Он звал утешно…» и «Не с теми я, кто бросил землю…».'
+        ]],
+        ['Фонтанный дом и годы террора', [
+          'В 1921 году, после развода с Ахматовой, Николай Гумилёв был арестован и расстрелян. В 1920-е годы важным местом её жизни стал Фонтанный дом, бывший Шереметевский дворец в Ленинграде. Здесь она жила в квартире искусствоведа Николая Пунина и его семьи. В эти годы Ахматова почти лишилась возможности печататься. Она продолжала писать и занималась Пушкиным. В исследованиях о «Сказке о золотом петушке» и «Каменном госте» её интересовало, как прочитанное Пушкиным становилось материалом для его собственных произведений.',
+          'В 1935 году Льва Гумилёва и Николая Пунина арестовали, вскоре обоих освободили. Новый арест сына в 1938 году привёл к лагерному сроку. Ахматова часами стояла в очередях у ленинградской тюрьмы «Кресты» и пыталась узнать, что с ним. Из этого опыта вырос «Реквием», основная часть которого составилась в 1935–1940 годах. Текст было опасно держать записанным. Близкие запоминали его фрагменты, и это позволяло сохранить стихи, предназначенные для читателей, до которых они ещё долго не могли дойти.'
+        ]],
+        ['Война, Ташкент и послевоенная травля', [
+          'Начало войны Ахматова встретила в Ленинграде. Осенью 1941 года её вывезли из города, и большую часть эвакуации она провела в Ташкенте. Там она читала стихи раненым в госпиталях. В 1942 году написала «Мужество», где сохранение русской речи стало одним из смыслов общей борьбы. В 1944 году она вернулась в Ленинград. Город, который поэт знала с юности, предстал перед ней опустошённым блокадой. Об этом возвращении она попыталась рассказать и в прозе.',
+          'В августе 1946 года партийное постановление о журналах «Звезда» и «Ленинград» обрушилось на Ахматову и Михаила Зощенко. Её исключили из Союза писателей, а возможности печатать собственные стихи снова резко сузились. В 1949 году Льва Гумилёва и Николая Пунина арестовали вновь. Пунин умер в лагере в 1953 году, Лев вернулся из заключения в 1956-м. В послевоенные годы Ахматова много переводила, продолжала писать стихи и возвращалась к «Поэме без героя», начатой ещё в 1940 году.'
+        ]],
+        ['Комарово и позднее признание', [
+          'С середины 1950-х годов Ахматова подолгу жила в Комарове, в маленькой даче, которую называла «Будкой». В автобиографии она назвала 1962 год временем окончания «Поэмы без героя», над которой работала больше двух десятилетий. В 1963 году «Реквием» вышел отдельным изданием в Мюнхене. Советский читатель смог прочесть полный текст в печати только в 1987 году. Поздняя известность Ахматовой при жизни росла вместе с возвращением её стихов в советскую печать, хотя самые важные произведения оставались доступны там лишь частично или в списках.',
+          'В 1964 году в Италии Ахматовой вручили премию «Этна-Таормина», а в 1965 году Оксфордский университет присудил ей степень почётного доктора. В том же году в СССР вышел её последний прижизненный сборник «Бег времени». Ахматова умерла 5 марта 1966 года в Домодедове под Москвой. Её похоронили в Комарове. Городская квартира в Фонтанном доме стала музеем, где сохранились следы её повседневной жизни и творчества.'
+        ]]
       ],
       traits: [
-        ['Драма в одной детали', 'В «Песне последней встречи» перепутанная перчатка выдаёт потрясение героини. Жест берёт на себя то, что в разговоре остаётся невысказанным.'],
-        ['Личный опыт и общая память', 'В «Реквиеме» переживания матери звучат вместе с голосами женщин у тюремных ворот. Отдельная судьба даёт представление о масштабе террора.'],
-        ['Город и ушедшая эпоха', 'В «Поэме без героя» Петербург 1913 года возникает в масках, обрывках разговоров и литературных отсылках. Прошлое показано из времени, когда уже известна судьба многих его участников.']
+        ['Драма в одной детали', 'В «Песне последней встречи» перепутанная перчатка выдаёт потрясение героини. В стихотворении «Двадцать первое. Ночь. Понедельник.» время и очертания города заданы короткими, отрывистыми фразами. В обоих случаях точная деталь позволяет почувствовать то, о чём говорящий сообщает лишь косвенно.'],
+        ['Личный голос и общая память', 'В «Реквиеме» голос матери звучит рядом с голосами других женщин, ожидающих у тюрьмы. Смена интонаций, от бытового рассказа до библейских образов, даёт услышать разные способы пережить утрату. В эпилоге Ахматова связывает память о себе с местом, где стояла вместе с другими.'],
+        ['Город и ушедшая эпоха', 'В «Поэме без героя» Петербург 1913 года возвращается в масках, обрывках разговоров и литературных отсылках. Карнавал Серебряного века виден из более позднего времени. Читатель уже знает о войне, революции и гибели людей, чьи лица проступают за масками.'],
+        ['Большая тема в обыденном слове', 'В «Родной земле» поэт вспоминает о грязи на обуви, о земле, которая хрустит на зубах, и о прахе. Смысл обращения к родине постепенно раскрывается через физическую близость к земле и знание о том, что человек в неё вернётся. Сдержанность речи придаёт этим образам вес.']
       ]
     },
     en: {
       dates: '1889–1966',
-      biography: [
-        'Born Anna Gorenko near Odesa, she spent her childhood in Tsarskoye Selo. Writing as Anna Akhmatova, she joined the St Petersburg Acmeists. Evening (1912) and Rosary (1914) made her name.',
-        'During the Soviet purges, her son Lev Gumilyov was arrested repeatedly. Evacuated from besieged Leningrad, she spent part of the war in Tashkent. In later life she completed Poem Without a Hero and published The Flight of Time.'
+      lifeSections: [
+        ['From Bolshoi Fontan to Tsarskoye Selo', [
+          'Anna Andreyevna Gorenko was born on 23 June 1889 (11 June in the old calendar) at Bolshoi Fontan near Odesa, the daughter of a retired naval engineer. When she was one, her family moved to Tsarskoye Selo. In her autobiography she remembered that she learned to read from Tolstoy’s primer and picked up French by listening to her older siblings’ lessons. The parks, ponds and railway station of Tsarskoye Selo can be recognised in her verse. In the 1958 poem Everything Here Will Outlive Me, a familiar place becomes a measure of human time. Worn birdhouses and a blossoming cherry tree will live on beyond the person looking at them.',
+          'After her parents separated in 1905, Anna lived with her mother in Yevpatoria. She finished school in Kyiv and went on to study law at the Higher Women’s Courses. Later she returned to St Petersburg and continued her studies in history and literature. For publication, Anna Gorenko adopted the name Akhmatova from her mother’s family. Among the poets who shaped her taste, she singled out Innokenty Annensky. His posthumous collection The Cypress Chest was one of her most important discoveries as a reader.'
+        ]],
+        ['Gumilyov, the Guild of Poets and the first books', [
+          'In 1910 Anna married Nikolai Gumilyov. They travelled to Paris, and she went back in the spring of 1911. There she spent time with Amedeo Modigliani, who made several drawings of her. In St Petersburg, Akhmatova took part in the Guild of Poets and joined the Acmeist circle with Gumilyov and Osip Mandelstam. Her first collection, Evening, appeared in 1912 in a print run of just three hundred copies. Her son Lev was born the same year. Rosary (1914) and White Flock (1917) followed.',
+          'In the early poems a conversation is often interrupted by a parting or recalled immediately afterwards. In She Clasped Her Hands Beneath a Dark Veil, the speaker remembers running after a man who is leaving. His ordinary remark at the end leaves an almost unbridgeable distance between them. Such precision in gesture and tone helps explain the success of the early books. War and revolution widened the scope of her poetry. Akhmatova stayed in Russia, and the cost of that decision informs I Heard a Voice and I Am Not With Those Who Left Their Land.'
+        ]],
+        ['Fountain House and the years of terror', [
+          'In 1921, after his divorce from Akhmatova, Gumilyov was arrested and executed. In the 1920s Fountain House, the former Sheremetev Palace in Leningrad, became a central place in her life. She lived there in the apartment of the art historian Nikolai Punin and his family. Her chances of publishing dwindled. She kept writing and studied Pushkin. Her essays on The Tale of the Golden Cockerel and The Stone Guest ask how what Pushkin read became material for what he wrote.',
+          'Lev Gumilyov and Nikolai Punin were arrested in 1935 and released soon afterwards. Lev was arrested again in 1938 and sentenced to a labour camp. Akhmatova spent hours in queues outside Leningrad’s Kresty prison, trying to learn what had happened to him. This experience gave rise to Requiem, most of which she composed between 1935 and 1940. It was dangerous to keep the words on paper. Friends memorised parts of the poem, preserving verses that would have to wait many years for their readers.'
+        ]],
+        ['War, Tashkent and the postwar campaign', [
+          'Akhmatova was in Leningrad when the war reached the Soviet Union. She was evacuated in the autumn of 1941 and spent most of the evacuation in Tashkent, where she read poetry to wounded soldiers in hospitals. In 1942 she wrote Courage, a poem that makes the survival of the Russian language part of the common struggle. She returned to Leningrad in 1944. The city she had known since her youth had been devastated by the siege. She also tried to write about her return in prose.',
+          'In August 1946 a Communist Party decree on the journals Zvezda and Leningrad targeted Akhmatova and Mikhail Zoshchenko. She was expelled from the Writers’ Union, and her opportunities to publish her own poems shrank again. In 1949 her son Lev and Nikolai Punin were arrested once more. Punin died in a camp in 1953. Lev returned from imprisonment in 1956. In the postwar years Akhmatova translated extensively, continued to write verse and worked on Poem Without a Hero, which she had begun in 1940.'
+        ]],
+        ['Komarovo and late recognition', [
+          'From the mid-1950s Akhmatova spent long stretches in Komarovo at a small dacha she called the Hut. In her autobiography she dated the completion of Poem Without a Hero to 1962, after more than twenty years of work. Requiem was published separately in Munich in 1963. Soviet readers could read the complete poem in print only in 1987. By the end of Akhmatova’s life her verse had begun to return to Soviet print, although some of her most important writing could still be read there only in fragments or unauthorised copies.',
+          'In 1964 she received the Etna-Taormina Prize in Italy, and in 1965 Oxford awarded her an honorary doctorate. That year The Flight of Time, her last collection published during her lifetime, appeared in the Soviet Union. Akhmatova died on 5 March 1966 in Domodedovo near Moscow and was buried in Komarovo. The Fountain House apartment became a museum preserving traces of her daily life and work.'
+        ]]
       ],
       traits: [
-        ['Drama in a detail', 'In Song of the Last Meeting, a glove put on the wrong hand betrays the speaker’s distress. The gesture says what the conversation leaves unspoken.'],
-        ['Private grief and public memory', 'Requiem places a mother’s grief alongside the voices of women waiting at prison gates. One life gives the reader a sense of the scale of the terror.'],
-        ['A city and a vanished age', 'In Poem Without a Hero, the St Petersburg of 1913 returns in masks, fragments of talk and literary allusions. The poem looks back from a time when many of those lives had already met their end.']
+        ['Drama in a detail', 'In Song of the Last Meeting, a glove put on the wrong hand betrays the speaker’s distress. In “The Twenty-First. Night. Monday.”, the time and the outlines of the city emerge in short, broken phrases. In both poems a precise detail suggests what the speaker conveys only indirectly.'],
+        ['Private grief and public memory', 'In Requiem a mother’s voice is heard beside those of other women waiting outside the prison. The shifts in tone, from ordinary narration to biblical imagery, let us hear different ways of living with loss. In the epilogue, Akhmatova links her own commemoration to the place where she stood with the others.'],
+        ['A city and a vanished age', 'In Poem Without a Hero, the St Petersburg of 1913 returns in masks, fragments of talk and literary allusions. The carnival of the Silver Age is seen from a later time. The reader already knows of the war, the revolution and the deaths of the people whose faces appear behind the masks.'],
+        ['An ordinary vocabulary for large themes', 'In Native Land, the earth appears as dirt on shoes, grit and dust. The speaker’s relation to her country emerges through physical closeness to the soil and the knowledge that she will return to it. The plain language gives these images their weight.']
       ]
     },
-    sources: [{ru:'Культура.РФ — Анна Ахматова',en:'Culture.ru — Anna Akhmatova',url:'https://www.culture.ru/persons/8260/anna-akhmatova'}]
+    sources: [
+      {ru:'Культура.РФ — Анна Ахматова',en:'Culture.ru — Anna Akhmatova',url:'https://www.culture.ru/persons/8260/anna-akhmatova'},
+      {ru:'Анна Ахматова — «Коротко о себе»',en:'Anna Akhmatova — A Short Autobiography',url:'https://litmap.tverlib.ru/ahmatova/autobiography.html'},
+      {ru:'Музей Ахматовой в Фонтанном доме — «Последняя комната»',en:'Akhmatova Museum at Fountain House — The Last Room',url:'https://www.akhmatova.spb.ru/akhmatova/flat/room1945'},
+      {ru:'Русский музей — «Ахматова и её современники»',en:'Russian Museum — Akhmatova and Her Contemporaries',url:'https://rusmuseumvrm.ru/reference/classifier/keyword/kto_izobrazh._anna_ahmatova/index.php?lang=ru'}
+    ]
   },
   balmont: {
     ru: {
