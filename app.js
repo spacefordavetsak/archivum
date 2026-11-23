@@ -98,7 +98,7 @@ const notes = [
   {section:'history',id:'bronze-age-reference',ru:'Бронзовый век — академический справочник',en:'The Bronze Age — An Academic Reference',ruDesc:'Цивилизации, государства и системы обмена. 27 документов и 19 карт.',enDesc:'Civilizations, states, and exchange networks. 27 documents and 19 maps.',image:'notes/bronze-art-nearEast.png'},
   {section:'history',collection:'ancient-greece',id:'e7839d1e-9989-4fd2-b7c0-9ad1b2e1b215',ru:'Выдающиеся личности античной Греции. Академический справочник',en:'Notable figures of ancient Greece. An academic reference',ruDesc:'Академический справочник о выдающихся деятелях Древней Греции.',enDesc:'An academic reference on notable figures of ancient Greece.'},
   {section:'history',collection:'rome',historian:'livy',id:'64cf4f3d-13e9-47a3-9911-9f92e5b2a57e',ru:'Тит Ливий. Полное собрание. Декады I–VI, Книги I–LX',en:'Livy. Collected works. Decades I–VI, Books I–LX',ruDesc:'Полное собрание сочинений Тита Ливия — фундаментальный труд по истории Древнего Рима.',enDesc:'The collected works of Livy, a foundational account of ancient Rome.'},
-  {section:'painting',id:'painting-favourites',ru:'Избранное',en:'Favourites',ruDesc:'Личная коллекция живописи. Художники, картины и размышления об искусстве.',enDesc:'A personal collection of paintings, artists, and reflections on art.'}
+  {section:'painting',id:'painting-favourites',ru:'Избранное',en:'Favourites',ruDesc:'Личная коллекция живописи. Художники, картины и размышления об искусстве.',enDesc:'A personal collection of paintings, artists, and reflections on art.'},
   {section:'poetry',poet:'batyushkov',id:'batyushkov-lais',ru:'В Лаисе',en:'To Lais',ruDesc:'Константин Николаевич Батюшков.',enDesc:'Konstantin Nikolayevich Batyushkov.'},
   {section:'poetry',poet:'batyushkov',id:'batyushkov-friendship',ru:'Дружество',en:'Friendship',ruDesc:'Константин Николаевич Батюшков · 1811 или начало 1812 года.',enDesc:'Konstantin Nikolayevich Batyushkov · 1811 or early 1812.'},
   {section:'poetry',poet:'batyushkov',id:'batyushkov-greek-anthology',ru:'Из греческой антологии',en:'From the Greek Anthology',ruDesc:'Константин Николаевич Батюшков.',enDesc:'Konstantin Nikolayevich Batyushkov.'},
@@ -204,3 +204,4 @@ document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('[data
 window.addEventListener('hashchange',()=>{closeReaderOverlays();if(scrollReaderAnchor())return;render();window.scrollTo({top:0,behavior:'instant'});main.focus({preventScroll:true})});
 document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();if(!searchDialog.open){searchInput.value='';renderSearch();searchDialog.showModal();searchInput.focus()}}});
 render();
+
