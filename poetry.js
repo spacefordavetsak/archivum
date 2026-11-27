@@ -239,7 +239,21 @@ function poetPage(id){
           <cite>Константин Бальмонт</cite>
         </blockquote>
       </div>`:''}
-    ${!['horace','derzhavin','balmont'].includes(id)?`
+    ${id==='boratynsky'?`
+      <div class="horace-feature">
+        <figure>
+          <img src="${escapeHTML(author.image)}" alt="${language==='ru'?'Портрет Евгения Абрамовича Боратынского':'Portrait of Yevgeny Abramovich Boratynsky'}" loading="eager">
+        </figure>
+        <blockquote lang="ru">
+          <span class="horace-ornament" aria-hidden="true">◆</span>
+          <p>Но прихотям судьбы я боле не служу:<br>
+             Счастливый отдыхом, на счастие похожим,<br>
+             Отныне с рубежа на поприще гляжу —<br>
+             И скромно кланяюсь прохожим.</p>
+          <cite>Евгений Абрамович Боратынский · 1823 г.</cite>
+        </blockquote>
+      </div>`:''}
+    ${!['horace','derzhavin','balmont','boratynsky'].includes(id)?`
       <div class="horace-feature poet-portrait-feature">
         <figure>
           <img src="${escapeHTML(id==='lorca'?'assets/lorca-portrait-1933.jpg':author.image)}" alt="${escapeHTML(label(author))}" loading="eager">
